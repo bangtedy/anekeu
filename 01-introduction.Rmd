@@ -1,0 +1,175 @@
+---
+#########################################
+# options for knitting a single chapter #
+#########################################
+output:
+  bookdown::pdf_document2:
+    template: templates/template.tex
+  bookdown::html_document2: default
+  bookdown::word_document2: default
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/aneku.bib
+---
+
+# Pengenalan R dan RStudio
+\minitoc <!-- this will include a mini table of contents-->
+
+<!-- For PDF output, include these two LaTeX commands after unnumbered chapter headings, otherwise the mini table of contents and the running header will show the previous chapter -->
+
+Alat utama yang akan kita gunakan untuk analisis ekonomi dan keuangan dalam buku ini adalah `R` (@rcoreteamLanguageEnvironmentStatistical2023) dan  [`RStudio`](https://posit.co/download/rstudio-desktop/). RStudio bukan R, juga tidak menyertakan R saat Anda mengunduh dan menginstalnya. Oleh karena itu, R dan RStudio perlu diunduh dan diinstal terpisah. 
+
+R dapat diunduh di [R Project for Statistical Computing](http://www.r-project.org/). Di situs ini juga terdapat tautan ke buku, manual, *R Journal* dan lain-lain untuk belajar R. Silakan unduh R di situs ini sesuai dengan platform komputasi Anda Windows, Macintosh atau Unix. Gratis! Sedangkan untuk menginstal RStudio silakan kunjungi [posit](https://posit.co/download/rstudio-desktop/). Silakan unduh *RStudio Desktop* dari situs ini. Juga gratis! Untuk pengenalan ini, saya berasumsi bahwa Anda telah mengunduh dan menginstal R dan RStudio di komputer Anda. 
+
+R tidak punya pengembang antarmuka pengguna grafis (GUI) yang sesuai dengan keinginan pengguna seperti halnya program SPSS atau Stata. GUI bawaan R terlihat lebih mirip dengan konsol DOS lama (lihat Gambar \@ref(fig:rgui)). Oleh karena itu, dalam buku ini kita akan fokus menggunakan R melalui antarmuka *RStudio*. Dengan RStudio, R lebih mudah digunakan dan lebih mirip dengan program SPSS atau Stata. 
+```{r rgui, echo=FALSE, fig.cap="GUI R", out.width="100%", message=FALSE, fig.pos='H'}
+knitr::include_graphics("figures/console432.png")
+```
+Hubungan antara R dan RStudio seperti mesin mobil dan dashboard (@ismayStatisticalInferenceData2019). Bahasa R dapat diumpamakan sebagai mesin mobil, sedangkan RStudio sebagai dasbornya sehingga kita  mudah mengkonfigurasi dan mengontrol kerja mesin. 
+
+Saya tidak akan menunjukkan fitur-fitur R dan RStudio secara mendetil. Apa yang akan saya bahas disini hanya menyentuh permukaan saja dari kemampuan R dan RStudio yang sangat banyak. Ada banyak rujukan bagus untuk mempelajari keduanya misalnya @crawleyBook2012, @wickhamDataScience2017 dan @verzaniGettingStartedRStudio2011. Banyak juga rujukan lain yang bisa diakses *online*.
+
+## Tata Letak RStudio
+
+Sebagai permulaan, kita akan mempelajari tata letak RStudio dan elemen inti yang akan kita gunakan. Saat Anda memulai RStudio untuk pertama kalinya, Anda akan melihat tiga panel (lihat Gambar \@ref(fig:3qu)).
+
+1. Panel kiri menunjukkan konsol R. Panel ini seperti GUI R yang kita lihat sebelumnnya. Di panel ini  kita bisa mengetikkan perintah untuk R. 
+2. Panel kanan atas berisi lima tab: *Environment, History, Connections, Build* dan *Tutorial*. Di dalam Environment semua kumpulan data, variabel, model, objek, dan plot akan disimpan. 
+3. Panel kanan bawah menampilkan enam tab: *File, Plots, Packages, Help, Viewer* dan *Presentation*. Tab *Plots* adalah tempat mencetak atau mengekspor plot dan grafik. Tab *Packages* menunjukkan berbagai paket yang terpasang di komputer Anda. Tab yang penting disini adalah *Help*: kita bisa mencari informasi jika kita lupa dengan fungsi-fungsi tertentu di dalam R. Anda dapat mengklik setiap tab untuk menelusuri berbagai fitur di dalamnya.    
+
+```{r 3qu, echo=FALSE, fig.cap="Antar Muka RStudio", out.width="100%", message=FALSE, fig.pos='H'}
+library(tidyverse)
+knitr::include_graphics("figures/3qu.png")
+```
+
+## Membuat Projek
+
+Setelah Anda membuka RStudio, langkah pertama adalah membuat file projek. Sebuah projek adalah tempat terpusat untuk semua objek, grafik dan skrip untuk projek kita. Dengan membuat projek, kita tidak perlu memikirkan lagi direktori kerja untuk menyimpan perhitungan, file, history dan data. Semua akan disimpan  di dalam folder projek ini. 
+
+Folder projek ini dapat disamakan dengan folder fisik tempat Anda menyimpan riset topik tertentu (misalnya *GARCH model*, *economic growth*, *game theory*). Masing-masing projek harus dibuatkan folder terpisah. Saat Anda ingin mengerjakan projek, Anda membuka folder Anda (dan menutup projek Anda setelah selesai). Saat kembali, Anda dapat membuka kembali folder dan melanjutkan dari bagian terakhir yang Anda tinggalkan. Projek RStudio juga serupa dalam hal itu.
+
+Langkah-langkah untuk membuat sebuah projek adalah:
+
+1. Di RStudio pilih “File” lalu “New Project.” Atau klik tanda R di pojok kanan atas, kemudian "New Project".
+2. Selanjutnya pilih opsi pertama “New Directory” - ini akan membuat folder baru di komputer Anda.
+3. Di tahap berikutnya pilih “New Directory” atau “Existing Directory”. Tergantung pada opsi yang Anda pilih, Anda akan memiliki beberapa pilihan di mana Anda ingin menempatkan proyek ini.
+4. Selanjutnya beri nama projek sesuka Anda.
+5. Klik tombol “Create Project”.
+
+## R dalam Gaya "Tanya Jawab"
+
+Kita dapat menggunakan R secara interaktif atau R dalam gaya "tanya jawab" (@dalgaardIntroductoryStatistics2008). Caranya dengan mengetik langsung di konsol panel di sebelah kiri (lihat Gambar \@ref(fig:3qu)). Kita menggunakan gaya ini ketika hanya penghitungan rumus tunggal yang diperlukan.
+
+Konsol R dapat digunakan seperti kalkulator sederhana. Mengetik ekspresi matematika dan menekan Enter akan mencetak hasilnya. Sebagai ilustrasi, misalnya Anda ingin menghitung 1 + 2, kita tulis *command prompt* **>**  *1+2* dan tekan **Enter**. Hasilnya tigakan? Urutan aturan operasi berlaku dan banyak fungsi matematika lain seperti akar kuadrat, `sqrt`, juga dapat diterapkan.
+```{r kalkulator, echo=TRUE}
+1+2
+1 / (2 + 15) - 1.5 + sqrt(3)
+```
+
+Selanjutnya kita mungkin ingin memberi nama dan menyimpan hasil perhitungan sebagai variabel, misalnya *tilu*. Maka kita tuliskan `tilu <- 1+2`. Artinya komputer menghitung 1 + 2 dan menyimpan hasilnya dalam variabel bernama tilu Pada saat kita mengetikkan `tilu <- 1+2`, seolah-olah tidak ada hal apa-apa yang terjadi. Maka untuk memanggil variabel tilu kita ketikkan lagi tilu dan tekan Enter. Perhatikan operator penugasan **<-** sebagai ciri khas R, walaupun kita bisa juga menggunakan tanda =. Perhatikan bahwa perintah ditampilkan dalam kotak abu-abu, sedangkan luarannya didahului dengan tanda pagar ganda ##. Dengan cara yang sama kita membuat variabel `opat <- 2+2`.
+
+```{r variabel, echo=TRUE}
+tilu <- 1+2
+tilu # memanggil variabel opat
+opat = 2+2
+opat
+```
+
+Setelah kita mendefinisikan suatu variabel, kita dapat melakukan perhitungan dengannya. Di dalam penelitian ekonomi dan keuangan hal ini sering kita lakukan misalnya menghitung *return* saham, GDP perkapita, inflasi dan lain-lain. 
+
+```{r manip-variabel, echo=TRUE}
+opat^2 # variabel opat dikuadratkan
+log(tilu) #variabel tilu dilogaritma
+```
+
+Operasi lain yang bisa dilakukan antara lain aritmatika yang lain (+, -, /, ^,…), operator perbandingan (==, <=,…), operator logika (&, |, !,…) dan fungsi matematika dasar seperti sin, cos, exp dan sqrt.
+
+Variabel paling dasar dalam R adalah vektor. Vektor R adalah barisan nilai yang bertipe sama. Misalnya, untuk membuat vektor lima dimensi beranggotakan angka 10, dan kita beri nama *lima10*, maka ketikkan `lima10 <-rep(10,5)` di konsol dan tekan Enter. Maka lima10 adalah vektor dengan lima elemen masing-masing 10; untuk melihatnya kita ketik `lima10` dan tekan Enter. Fungsi *rep* merupakan fungsi khusus dari R yang merupakan kependekan dari pengulangan (repeat). Argumennya ditulis sebagai *rep(apa yang diulang, berapa kali pengulangan)*. 
+
+```{r fungsi-rep, echo=TRUE}
+lima10 <-rep(10,5)
+lima10
+```
+Jika a dan b bilangan bulat, perintah a:b akan membuat vektor bilangan bulat dari a ke b.
+
+```{r vektor, echo=TRUE}
+vektor17 <- 1:7
+vektor17
+```
+
+Untuk lebih bisa mengontrol vektor yang dibuat, Anda gunakan perintah `seq`.
+
+```{r sekuen, echo=TRUE}
+sek305 <- seq(1,30,5) # membuat vektor bilangan dari 1-30 dengan beda 5
+sek305
+sek301 <- seq(30,1,-5) # membuat vektor bilangan dari 30-1 dengan beda -5
+sek301
+```
+Elemen vektor dapat diindeks dengan tanda kurung [ ]. Argumen braket dapat berupa bilangan bulat tunggal atau vektor.
+
+```{r elemen, echo=TRUE}
+sek305[4]
+sek305[1:4]
+sek305[c(1,4,5,10)]
+```
+Untuk perintah terakhir saya meminta elemen vektor *sek305* yang pertama, keempat, kelima, dan kesepuluh. Karena tidak ada elemen kesepuluh di dalam vektor sek305, maka hasilnya NA (*not available*). Seringkali kita juga ingin mencari elemen suatu vektor yang memenuhi suatu kondisi tertentu, misalnya elemen sek305 yang kurang dari 10. Hal ini dilakukan dengan meminta indeks yang memenuhi
+
+```{r which, echo=TRUE}
+sek305
+which(sek305 < 10) # elemen keberapa yang kurang dari 10
+index <- which(sek305 < 10) # bilangan berapa saja yang kurang dari 10 dari vektor sek305 
+sek305[index]
+```
+Vektor dapat terdiri dari angka, karakter dan bahkan rangkaian karakter. Contoh:
+
+```{r karakter, echo=TRUE}
+studiku <- c("Fakultas", "ekonomi", "dong!", "memang", "kereen") # perhatikan penggunanaan ""
+studiku
+studiku[c(1,2,3)]
+studiku[5]
+```
+Untuk membuat matriks juga dapat dilakukan dengan mudah. Misalnya, `mat.pi.4.5 <-matrix(pi, nrow=4,ncol=5)` adalah perintah untuk membuat matriks dimensi 4 × 5 dengan nama *mat.pi.4.5* dengan semua entri $\pi$. Sekali lagi, untuk melihat hasilnya, ketik *mat.pi.4.5* dan tekan Enter. R peka penulisan huruf besar-kecil. Jadi *mat.pi.4.5* dan *mat.Pi.4.5* memiliki arti yang berbeda. Hampir semua perintah menggunakan huruf kecil, kecuali perintah *View()* dan beberapa perintah dari *package* tertentu. 
+
+```{r fungsi-matriks, echo=TRUE}
+mat.pi.4.5 <-matrix(pi, nrow=4,ncol=5)
+mat.pi.4.5
+```
+
+## Saatnya menggunakan skrip
+
+Biasanya penghitungan statistik melibatkan banyak baris kode. Jika demikian saatnya kita beralih menggunakan skrip (*script*). Penggunaan file skrip (file .R) dapat membantu menjalankan beberapa langkah kode sekaligus. File skrip terletak di sudut kiri atas jendela RStudio Anda atau file *source*. Untuk membuat skrip baru, Anda dapat mengklik *File, New File*, lalu *R Script* atau dengan *shortcut* **Ctrl+Shift+N**. Maka dilayar RStudio akan muncul layar baru di kiri atas sehingga Anda sekarang punya empat panel. Inilah salah satu keunggulan R dibandingkan perangkat lunak analisis *point and click* yaitu Anda dapat menyimpan pekerjaan Anda sebagai skrip. Lihat Gambar \@ref(fig:4qu)!
+
+File *source* memungkinkan Anda mengetikkan kode R dan kemudian mengevaluasinya, sehingga  terkadang disebut “mengirim perintah ke konsol” - atau memindahkan pernyataan R dari jendela *source* ke konsol. Penggunaan file skrip memungkinkan Anda memperbaiki kesalahan kode  dengan lebih cepat dan kemudian menjalankan kembali kode Anda tanpa perlu mengetik ulang semuanya dari awal.
+
+```{r 4qu, echo=FALSE, fig.cap="Antar Muka RStudio dengan Skrip", out.width="100%", message=FALSE, fig.pos='H'}
+knitr::include_graphics("figures/4qu.png")
+```
+
+Skrip ini setara dengan file sintaks di Stata: skrip menyajikan kode yang diperlukan untuk menghasilkan analisis yang diperlukan. Anda dapat menyimpan dan membagikan pekerjaan Anda sebagai skrip yang berisi kode yang dapat dijalankan lain waktu. Hal ini sangat berguna sebagai catatan analisis yang Anda lakukan, melakukan verifikasi analisis atau untuk replikasi studi.
+
+Untuk menjalankan kode dalam Skrip R, untuk satu baris kode, letakkan tetikus di depan kode, untuk satu blok baris, pilih kode tersebut, lalu klik tombol *Run* atau tekan Ctrl + Enter di Windows sistem.
+
+Dalam Skrip R, dimungkinkan untuk menambahkan komentar menggunakan. Segala sesuatu setelah tanda # akan dianggap sebagai komentar dan tidak akan dijalankan oleh R.
+
+Di awal setiap skrip R, sebaiknya diketikkan paket-paket yang diperlukan untuk mengimplementasikan kode dalam file. Setelah menulis kode untuk memuat paket dengan fungsi *library()*, Anda dapat menambahkan, sebagai komentar, kata kunci untuk mengingatkan tentang penggunaan paket. Ini akan membantu kita mengingat isi file dan menjelaskan kepada orang lain apa yang diperlukan untuk mengimplementasikan kode dalam skrip R.
+
+Ini juga merupakan kebiasan baik untuk mendeskripsikan proyek dan menulis komentar singkat di  fungsi-fungsi yang kita buat. Sekali lagi ini berguna bagi penulis skrip dan bagi orang ketiga yang akan membaca kode tersebut. 
+
+## Manajemen Data dan Projek di R
+
+R adalah bahasa pemrograman berorientasi objek. Saat Anda membukanya, Anda memiliki lingkungan (*Environment*) kosong yang dapat diisi dengan objek sebanyak kemampuan memori komputer Anda. Segala sesuatu yang ingin Anda simpan atau manipulasi di lain waktu perlu didefinisikan sebagai objek di lingkungan ini. Termasuk disini file data, objek atau hasil model, grafik, dan sebagainya. Artinya, tidak seperti perangkat lunak statistik standar, yang biasanya hanya mengizinkan analis untuk membuka satu kumpulan data, R memungkinkan analis untuk bekerja dengan beberapa file data secara bersamaan.
+
+Ekstensi file R untuk file data adalah .RData. Anda dapat menyimpan satu atau lebih objek dalam file tersebut menggunakan fungsi File > Save (Ctrl + S). Lokasi penyimpanan file ini berada di direktori yang sama dengan file proyek *.Rproj* Anda.Di dalam *RData* tersimpan hasil model, grafik, atau objek apa pun. Hal ini sangat berguna ketika model membutuhkan waktu lama untuk dalam penghitungannya. Hasil tersebut dapat disimpan dan digunakan kembali nanti. 
+
+Selain file RData, menyimpan file dalam format .csv juga efektif saat bekerja di R. Ada perintah dasar R untuk mengimpor dan mengekspor file csv (masing-masing *read.csv* dan *write.csv*). R dapat langsung mengimpor data dari paket perangkat lunak statistik lain (SPSS, Stata), namun hal ini memerlukan pengunduhan paket (*package*) yang tidak disertakan dalam instalasi bawaan R. Kita membahas paket di bagian selanjutnya.
+
+## Paket-Paket R
+
+R bekerja melalui paket termasuk paket dasar dan ribuan paket tambahan. Paket ini mirip dengan aplikasi di ponsel Anda, yang bisa ditambahkan pada ponsel untuk meningkatkan fungsionalitas ponsel Anda.  Paket dibuat oleh pengguna  dan dibagikan kepada pengguna lain. 
+
+Anda perlu mengunduh paket tertentu untuk menyediakan perintah yang diperlukan dan dapat menjalankan model atau analisis tertentu jika fungsi itu tidak tersedia secara *default*. Paket-paket itu memerlukan tiga langkah untuk menggunakannya. Pertama, kita harus menginstal paket itu sendiri, memuatnya dari *library*, dan terakhir memanggil salah satu fungsi paket tersebut. 
+
+Paket dapat diunduh di CRAN (*Comprehensive R Archive Network*) dan dapat diinstal melalui kode `install.packages("nama paket")` atau melalui opsi drop-down (*Tools -> Install Package*). Paket di CRAN telah dievaluasi untuk memastikan paket tersebut berfungsi di seluruh platform. Paket bisa dapat diinstall dari Github. Paket tersebut dapat diinstal menggunakan fungsi `devtools::install_ github` (@wickhamDevtoolsToolsMake2022). Untuk setiap sesi R yang baru, paket yang diperlukan perlu dimuat (bukan diinstal ulang, cukup dimuat ulang dengan fungsi `library ()` atau `require()`.
+
+## Mengimpor Data ke dalam R
+
+Dalam pelaksanaan analisis data, data sering kali disimpan dalam berbagai format. Selain itu kita tidak memasukkan data langsung ke R, biasanya ke worksheet. R dapat membaca berbagai jenis file data seperti free format text files (txt), comma separated value ﬁles (csv), file Excel, file SPSS, file SAS, dan file Stata. Mengimpornya ke dalam R juga mudah. Kita dapat mengimpor .csv file menggunakan basis R. Tetapi jika data dalam format lain, kita perlu menginstal paket untuk mengimpor data misalnya paket *foreign* (@rcoreteamForeignReadData2023) yang berfungsi untuk membaca dan menulis file data dari SAS, SPSS dan Stata. Paket ini dapat diinstal dengan perintah `install.packages("foreign")`. Untuk melakukan impor klik *File > Import Dataset > From Excel, From Stata, From SPSS* dan lain-lain, pilih sesuai jenis data Anda.
