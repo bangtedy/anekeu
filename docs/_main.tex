@@ -250,8 +250,8 @@
 
 %%%%% THESIS / TITLE PAGE INFORMATION
 % Everybody needs to complete the following:
-\title{\texttt{RStudio}:\\
-untuk Ekononomi dan Bisnis\\}
+\title{Analisis Ekonomi dan Keuangan\\
+dengan \texttt{RStudio}\\}
 \author{Tedy Herlambang}
 \college{---}
 
@@ -264,7 +264,7 @@ untuk Ekononomi dan Bisnis\\}
 \degree{---}
 
 % Term and year of submission, or date if your board requires (eg most masters)
-\degreedate{2025}
+\degreedate{----}
 
 
 %%%%% YOUR OWN PERSONAL MACROS
@@ -337,7 +337,7 @@ untuk Ekononomi dan Bisnis\\}
 
 %%%%% DEDICATION
 \begin{dedication}
-  For The Rising Star
+  Untuk Para Pengembang \texttt{R\ Markdown} dan \texttt{Bookdown}
 \end{dedication}
 
 %%%%% ACKNOWLEDGEMENTS
@@ -420,53 +420,112 @@ Jangan ragu untuk menghubungi saya dengan pemikiran Anda tentang buku ini, ide p
 
 % all your chapters and appendices will appear here
 \hypertarget{pengenalan-r-dan-rstudio}{%
-\chapter{Pengenalan R dan Rstudio}\label{pengenalan-r-dan-rstudio}}
+\chapter{Pengenalan R dan RStudio}\label{pengenalan-r-dan-rstudio}}
 
 \minitoc 
 
-Ada banyak situs rujukan bagus untuk belajar R. Tempat pertama menurut saya adalah \emph{R Project for Statistical Computing} di \url{http://www.r-project.org/}. Situs ini berisi tautan ke buku, manual, \emph{R Journal} dan lain-lain. Silakan unduh R di situs ini. Gratis! Sedangkan untuk menginstal RStudio silakan kunjungi \href{https://posit.co/download/rstudio-desktop/}{posit}. Silakan unduh \emph{RStudio Desktop} dari situs ini. Juga gratis! Untuk pengenalan ini, saya berasumsi bahwa Anda telah mengunduh dan menginstal R dan RStudio di komputer Anda. Kurva pembelajaran untuk R tidak terlalu curam. Dalam waktu singkat, Anda akan dapat menggunakan R secara aktif.
+Alat utama yang akan kita gunakan untuk analisis ekonomi dan keuangan dalam buku ini adalah \texttt{R} (Team (\protect\hyperlink{ref-rcoreteamLanguageEnvironmentStatistical2023}{2023})) dan \href{https://posit.co/download/rstudio-desktop/}{\texttt{RStudio}}. RStudio bukan R, juga tidak menyertakan R saat Anda mengunduh dan menginstalnya. Oleh karena itu, R dan RStudio perlu diunduh dan diinstal terpisah.
 
-R tersedia secara gratis untuk berbagai platform komputasi seperti Windows, Macintosh dan Unix. Ini membuat R lebih fleksibel. Tetapi di sisi lain, ini berarti tidak ada pengembangan antarmuka pengguna grafis (GUI) yang sesuai dengan keinginan pengguna seperti halnya program berbayar SPSS atau Stata. GUI bawaan R terlihat lebih mirip dengan konsol DOS lama. Lihat Gambar \ref{fig:rgui}.
+R dapat diunduh di \href{http://www.r-project.org/}{R Project for Statistical Computing}. Di situs ini juga terdapat tautan ke buku, manual, \emph{R Journal} dan lain-lain untuk belajar R. Silakan unduh R di situs ini sesuai dengan platform komputasi Anda Windows, Macintosh atau Unix. Gratis! Sedangkan untuk menginstal RStudio silakan kunjungi \href{https://posit.co/download/rstudio-desktop/}{posit}. Silakan unduh \emph{RStudio Desktop} dari situs ini. Juga gratis! Untuk pengenalan ini, saya berasumsi bahwa Anda telah mengunduh dan menginstal R dan RStudio di komputer Anda.
+
+R tidak punya pengembang antarmuka pengguna grafis (GUI) yang sesuai dengan keinginan pengguna seperti halnya program SPSS atau Stata. GUI bawaan R terlihat lebih mirip dengan konsol DOS lama (lihat Gambar \ref{fig:rgui}). Oleh karena itu, dalam buku ini kita akan fokus menggunakan R melalui antarmuka \emph{RStudio}. Dengan RStudio, R lebih mudah digunakan dan lebih mirip dengan program SPSS atau Stata.
 
 \begin{figure}[H]
 \includegraphics[width=1\linewidth]{figures/console432} \caption{GUI R}\label{fig:rgui}
 \end{figure}
 
-Dalam buku ini, kita akan fokus menggunakan R melalui antarmuka \textbf{RStudio}. Kita bisa menulis skrip menggunakan teks editor selain RStudio. Tetapi dengan RStudio, R lebih mudah digunakan dan lebih mirip dengan program SPSS atau Stata.
+Hubungan antara R dan RStudio seperti mesin mobil dan dashboard (Ismay \& Kim (\protect\hyperlink{ref-ismayStatisticalInferenceData2019}{2019})). Bahasa R dapat diumpamakan sebagai mesin mobil, sedangkan RStudio sebagai dasbornya sehingga kita mudah mengkonfigurasi dan mengontrol kerja mesin.
 
-RStudio bukan R, juga tidak menyertakan R saat Anda mengunduh dan menginstalnya. Oleh karena itu, untuk menggunakan RStudio kita perlu menginstal R terlebih dahulu. Hubungan antara R dan RStudio seperti metafora mesin mobil dan dashboard (Ismay \& Kim (\protect\hyperlink{ref-ismayStatisticalInferenceData2019}{2019})). Bahasa R dapat diumpamakan sebagai mesin dalam mobil yang bekerja, sedangkan RStudio sebagai dasbornya yang menyediakan cara mudah untuk mengonfigurasi dan mengontrol mesin.
-
-Saya tidak akan menunjukkan pengenalan mendalam tentang fitur-fitur R atau RStudio. Apa yang akan saya bahas disini hanya menyentuh permukaan saja dari kemampuan R dan RStudio yang sangat banyak. Ada banyak rujukan bagus dan gratis untuk mempelajari dasar-dasarnya secara \emph{online}. Untuk pengantar R dapat ditemukan di Crawley (\protect\hyperlink{ref-crawleyBook2012}{2012}) dan Wickham \& Grolemund (\protect\hyperlink{ref-wickhamDataScience2017}{2017}), dan untuk pengenalan RStudio dapat dibaca Verzani (\protect\hyperlink{ref-verzaniGettingStartedRStudio2011}{2011}).
+Di buku ini, saya tidak menunjukkan fitur-fitur R dan RStudio yang sangat banyak secara mendetil. Bab ini hanya berisi contoh mengoperasikan R dan RStudio, metode untuk menginstal paket R dan paket pihak ketiga yang diperlukan untuk digunakan dalam buku ini di bab berikutnya.
 
 \hypertarget{tata-letak-rstudio}{%
 \section{Tata Letak RStudio}\label{tata-letak-rstudio}}
 
-Sebagai permulaan, kita akan mempelajari tata letak RStudio dan elemen inti yang akan kita gunakan saat bekerja (nanti Anda dapat mengubah tata letak dan tampilan RStudio sesuai selera). Antarmuka RStudio dibagi menjadi beberapa kuadran (lihat Gambar \ref{fig:3qu}).
+Sebagai permulaan, kita akan mempelajari tata letak RStudio dan elemen inti yang akan kita gunakan. Saat Anda memulai RStudio untuk pertama kalinya, Anda akan melihat tiga panel (lihat Gambar \ref{fig:3qu}).
 
-Saat Anda memulai RStudio untuk pertama kalinya, Anda akan melihat tiga panel. Panel kiri menunjukkan konsol R. Kuadran ini juga dapat digunakan sebagai sumber masukan langsung untuk perintah. Kita belum membuka skrip, jadi kita tidak melihat panel skrip. Anda mempunyai dua pilihan disini: mengetik langsung di konsol (panel di sebelah kiri) atau membuat skrip.
-
-Jika kita mengetikkan perintah langsung ke konsol, kita menggunakan R secara interaktif atau R dalam gaya ``tanya jawab'' (Dalgaard (\protect\hyperlink{ref-dalgaardIntroductoryStatistics2008}{2008})). Kelemahannya cara ini adalah kita lebih sulit untuk mengulangi atau menyimpan perintah-perintah kita. Semua fungsi akan dijalankan segera setelah kita menekan tombol \textbf{Enter}. Jika kita ingin menjalankan perintah cepat yang tidak perlu didokumentasikan dalam skrip, kita cukup menggunakan cara ini yaitu memasukkan perintah tersebut di konsol dan tekan Enter (Windows).
-
-Di sebelah kanan, panel atas berisi lima tab: \emph{Environment, History, Connections, Build} dan \emph{Tutorial}. Di dalam Environment semua kumpulan data, variabel, model, objek, dan plot yang berbeda akan disimpan. Kuadran ini juga menunjukkan daftar berbagai objek yang ada dalam sesi R yang sedang berjalan. Jika kita menginput suatu dataset atau membuat variabel baru, semuanya akan muncul di kuadran ini.
-
-Sedangkan panel kanan bawah menampilkan enam tab: \emph{File, Plots, Packages, Help, Viewer} dan \emph{Presentation}. Anda dapat mengklik setiap tab untuk menelusuri berbagai fitur di dalamnya. Tab \emph{Plots} adalah tempat mencetak atau mengekspor plot dan grafik. Tab \emph{Packages} menunjukkan berbagai paket yang terpasang di komputer Anda. Tab yang penting disini adalah \emph{Help}: kita bisa bantuan jika kita lupa dengan fungsi-fungsi tertentu.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Panel kiri menunjukkan konsol R. Panel ini seperti GUI R yang kita lihat sebelumnnya. Di panel ini kita bisa mengetikkan perintah untuk R.
+\item
+  Panel kanan atas berisi lima tab: \emph{Environment, History, Connections, Build} dan \emph{Tutorial}. Di dalam Environment semua kumpulan data, variabel, model, objek, dan plot akan disimpan.
+\item
+  Panel kanan bawah menampilkan enam tab: \emph{File, Plots, Packages, Help, Viewer} dan \emph{Presentation}. Tab \emph{Plots} adalah tempat mencetak atau mengekspor plot dan grafik. Tab \emph{Packages} menunjukkan berbagai paket yang terpasang di komputer Anda. Tab yang penting disini adalah \emph{Help}: kita bisa mencari informasi jika kita lupa dengan fungsi-fungsi tertentu di dalam R. Anda dapat mengklik setiap tab untuk menelusuri berbagai fitur di dalamnya.
+\end{enumerate}
 
 \begin{figure}[H]
 \includegraphics[width=1\linewidth]{figures/3qu} \caption{Antar Muka RStudio}\label{fig:3qu}
 \end{figure}
 
+\hypertarget{membuat-projek}{%
+\section{Membuat Projek}\label{membuat-projek}}
+
+Setelah Anda membuka RStudio, langkah pertama yang sebaiknya Anda lakukan adalah membuat file projek. Sebuah projek adalah tempat terpusat untuk semua objek, grafik dan skrip untuk projek kita. Dengan membuat projek, kita tidak perlu memikirkan lagi direktori kerja untuk menyimpan perhitungan, file, history dan data. Semua akan disimpan di dalam folder projek ini.
+
+Folder projek ini dapat disamakan dengan folder fisik tempat Anda menyimpan riset topik tertentu (misal projek \emph{economic growth}, \emph{game theory}, \emph{financial engineering}). Masing-masing projek harus dibuatkan folder terpisah. Saat Anda ingin mengerjakan projek, Anda membuka folder Anda (dan menutup projek Anda setelah selesai). Saat kembali, Anda dapat membuka kembali folder dan melanjutkan dari bagian terakhir yang Anda tinggalkan. Projek RStudio juga serupa dalam hal itu.
+
+Langkah-langkah untuk membuat sebuah projek adalah:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Di RStudio pilih ``File'' lalu ``New Project.'' Atau klik tanda R di pojok kanan atas, kemudian ``New Project''.
+\item
+  Selanjutnya pilih opsi pertama ``New Directory'' - ini akan membuat folder baru di komputer Anda.
+\item
+  Di tahap berikutnya pilih ``New Directory'' atau ``Existing Directory''. Tergantung pada opsi yang Anda pilih, Anda akan memiliki beberapa pilihan di mana Anda ingin menempatkan proyek ini.
+\item
+  Selanjutnya beri nama projek sesuka Anda.
+\item
+  Klik tombol ``Create Project''.
+\end{enumerate}
+
 \hypertarget{r-dalam-gaya-tanya-jawab}{%
 \section{R dalam Gaya ``Tanya Jawab''}\label{r-dalam-gaya-tanya-jawab}}
 
-Disini kita akan mempraktiikan R dalam gaya tanya jawab yaitu mengetik perintah langsung ke konsol. Kita menggunakan gaya ini ketika hanya penghitungan rumus tunggal yang diperlukan, seperti kalkulator. Ketika komputasi melibatkan beberapa langkah, kita akan beralih menggunakan skrip (dibagian selanjutnya).
+Kita dapat menggunakan R secara interaktif atau R dalam gaya ``tanya jawab'' (Dalgaard (\protect\hyperlink{ref-dalgaardIntroductoryStatistics2008}{2008})). Caranya dengan mengetik langsung di konsol panel di sebelah kiri (lihat Gambar \ref{fig:3qu}). Kita menggunakan gaya ini ketika hanya penghitungan rumus tunggal yang diperlukan.
 
-Dalam buku ini, kita jarang mengetik langsung ke konsol, namun jika Anda merasa perlu mengulangi atau mengunjungi kembali perintah yang telah Anda gunakan di konsol, di panel kanan atas ada tab \emph{History} berisi catatan lengkap dari setiap perintah yang telah Anda gunakan sebelumnya.
-
-Sebagai ilustrasi, misalnya Anda ingin menghitung 2 × 2, kita menulis setelah \emph{command prompt} \textbf{\textgreater{}} 2*2 dan tekan \textbf{Enter}. Selanjutnya kita dapat memberi nama dan menyimpan hasilnya (sebagai nama variabel), misalnya \emph{opat}. Maka kita tuliskan opat \textless- 2*2. Artinya komputer menghitung 2 × 2 dan menyimpan hasilnya dalam variabel bernama opat. Perhatikan operator penugasan \textbf{\textless-} sebagai ciri khas R, walaupun kita bisa juga menggunakan tanda =. Contoh perintah/kode ditampilkan dalam kotak abu-abu, sedangkan luarannya didahului dengan tanda pagar ganda \#\#. Dengan cara yang sama kita buat variabel onom \textless- 2*3.
+Konsol R dapat digunakan seperti kalkulator sederhana. Mengetik ekspresi matematika dan menekan Enter akan mencetak hasilnya. Sebagai ilustrasi, misalnya Anda ingin menghitung 1 + 2, kita tulis setelah \textbf{\textgreater{}} \emph{1+2} dan tekan \textbf{Enter}. Hasilnya tigakan? Urutan aturan operasi berlaku dan banyak fungsi matematika lain seperti akar kuadrat, \texttt{sqrt}, juga dapat diterapkan seperti yang diperlihatkan di contoh berikutnya.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\DecValTok{2}\SpecialCharTok{*}\DecValTok{2}
+\DecValTok{1}\SpecialCharTok{+}\DecValTok{2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1} \SpecialCharTok{/}\NormalTok{ (}\DecValTok{2} \SpecialCharTok{+} \DecValTok{15}\NormalTok{) }\SpecialCharTok{{-}} \FloatTok{1.5} \SpecialCharTok{+} \FunctionTok{sqrt}\NormalTok{(}\DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.2908743
+\end{verbatim}
+
+Selanjutnya kita mungkin ingin memberi nama dan menyimpan hasil perhitungan sebagai variabel, misalnya \emph{tilu}. Maka kita tuliskan \texttt{tilu\ \textless{}-\ 1+2}. Artinya komputer menghitung 1 + 2 dan menyimpan hasilnya dalam variabel bernama tilu Pada saat kita mengetikkan \texttt{tilu\ \textless{}-\ 1+2}, dan menekan Enter, seolah-olah tidak terjadi apa-apa pada RStudio. Maka untuk memanggil variabel tilu kita ketikkan lagi tilu dan tekan Enter. Perhatikan operator penugasan \textbf{\textless-} sebagai ciri khas R, walaupun kita bisa juga menggunakan tanda =. Perhatikan di buku ini perintah ditampilkan dalam kotak abu-abu, sedangkan luarannya didahului dengan tanda pagar ganda \#\#. Dengan cara yang sama kita membuat variabel \texttt{opat\ =\ 2+2}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tilu }\OtherTok{\textless{}{-}} \DecValTok{1}\SpecialCharTok{+}\DecValTok{2}
+\NormalTok{tilu }\CommentTok{\# memanggil variabel opat}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{opat }\OtherTok{=} \DecValTok{2}\SpecialCharTok{+}\DecValTok{2}
+\NormalTok{opat}
 \end{Highlighting}
 \end{Shaded}
 
@@ -474,44 +533,47 @@ Sebagai ilustrasi, misalnya Anda ingin menghitung 2 × 2, kita menulis setelah \
 ## [1] 4
 \end{verbatim}
 
+Setelah kita mendefinisikan suatu variabel, kita dapat melakukan perhitungan lanjutan dengan variabel tersebut. Di dalam penelitian ekonomi dan keuangan hal ini sering kita lakukan misalnya menghitung \emph{return} saham, GDP perkapita, inflasi dan lain-lain, yang baru bisa kita dapatkan setelah melakukan penghitungan lanjutan dari data mentah yang didapat.
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{opat }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{*}\DecValTok{2}
-\NormalTok{opat }\CommentTok{\# memanggil variabel opat}
+\NormalTok{opat}\SpecialCharTok{\^{}}\DecValTok{2} \CommentTok{\# variabel opat dikuadratkan}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 4
+## [1] 16
 \end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{onom }\OtherTok{=} \DecValTok{3}\SpecialCharTok{*}\DecValTok{2}
-\NormalTok{onom}
+\FunctionTok{log}\NormalTok{(tilu) }\CommentTok{\#variabel tilu dilogaritma}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 6
+## [1] 1.098612
 \end{verbatim}
 
-Hal ini juga berlaku untuk operasi aritmatika (+, -, /, \^{},\ldots), operator perbandingan (==, \textless=,\ldots), operator logika (\&, \textbar, !,\ldots) dan fungsi matematika dasar seperti sin, cos, exp, logaritma (log), akar kuadrat (sqrt).
+Operasi lain yang bisa dilakukan antara lain aritmatika (+, -, /, \^{},\ldots), operator perbandingan (==, \textless=,\ldots), operator logika (\&, \textbar, !,\ldots) dan fungsi matematika dasar seperti sin, cos, exp dan sqrt.
 
-Variabel paling dasar dalam R adalah vektor. Vektor R adalah barisan nilai yang bertipe sama. Misalnya, untuk membuat vektor lima dimensi beranggotakan angka 7, kita menuliskan \emph{tujuh5 \textless-rep(7,5)}. Maka tujuh5 adalah vektor dengan masing-masing komponen 7; untuk melihatnya kita ketik \texttt{tujuh5} dan tekan Enter. Fungsi \emph{rep} merupakan fungsi khusus dari R yang merupakan kependekan dari pengulangan (repeat). Argumennya ditulis sebagai \emph{rep(apa yang diulang,berapa kali)}.
+\hypertarget{vektor}{%
+\section{Vektor}\label{vektor}}
+
+Variabel paling dasar dalam R adalah vektor. Vektor R adalah barisan nilai yang bertipe sama. Misalnya, untuk membuat vektor lima dimensi beranggotakan angka 10, dan kita beri nama \emph{lima10}, maka ketikkan \texttt{lima10\ \textless{}-rep(10,5)} di konsol dan tekan Enter. Maka lima10 adalah vektor dengan lima elemen masing-masing 10; untuk melihatnya kita ketik \texttt{lima10} dan tekan Enter. Fungsi \emph{rep} merupakan fungsi khusus dari R yang merupakan kependekan dari pengulangan (repeat). Argumennya ditulis sebagai \emph{rep(apa yang diulang, berapa kali pengulangan)}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{tujuh5 }\OtherTok{\textless{}{-}}\FunctionTok{rep}\NormalTok{(}\DecValTok{7}\NormalTok{,}\DecValTok{5}\NormalTok{)}
-\NormalTok{tujuh5}
+\NormalTok{lima10 }\OtherTok{\textless{}{-}}\FunctionTok{rep}\NormalTok{(}\DecValTok{10}\NormalTok{,}\DecValTok{5}\NormalTok{)}
+\NormalTok{lima10}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 7 7 7 7 7
+## [1] 10 10 10 10 10
 \end{verbatim}
 
-Jika a dan b bilangan bulat, perinah a:b membuat vektor bilangan bulat dari a ke b.
+Jika a dan b bilangan bulat, perintah a:b akan membuat vektor bilangan bulat dari a ke b.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -524,7 +586,7 @@ Jika a dan b bilangan bulat, perinah a:b membuat vektor bilangan bulat dari a ke
 ## [1] 1 2 3 4 5 6 7
 \end{verbatim}
 
-Untuk lebih bisa mengontrol vektor yang dibuat, Anda gunakan perintah sekuen \emph{seq}.
+Untuk lebih bisa mengontrol vektor yang dibuat, Anda gunakan perintah \texttt{seq}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -580,7 +642,7 @@ Elemen vektor dapat diindeks dengan tanda kurung {[} {]}. Argumen braket dapat b
 ## [1]  1 16 21 NA
 \end{verbatim}
 
-Untuk perintah terakhir saya meminta elemen vektor sek305 yang pertama, keempat, kelima, dan kesepuluh. Karena tidak ada elemen kesepuluh di dalam vektor sek305, maka hasilnya NA (\emph{not available}). Seringkali kita juga ingin mencari elemen suatu vektor yang memenuhi suatu kondisi tertentu, misalnya elemen sek305 yang kurang dari 10. Hal ini dilakukan dengan meminta indeks yang memenuhi
+Untuk perintah terakhir saya meminta elemen vektor \emph{sek305} yang pertama, keempat, kelima, dan kesepuluh. Karena tidak ada elemen kesepuluh di dalam vektor sek305, maka hasilnya NA (\emph{not available}). Seringkali kita juga ingin mencari elemen suatu vektor yang memenuhi suatu kondisi tertentu, misalnya elemen sek305 yang kurang dari 10. Hal ini dilakukan dengan meminta indeks yang memenuhi
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -613,111 +675,147 @@ Untuk perintah terakhir saya meminta elemen vektor sek305 yang pertama, keempat,
 ## [1] 1 6
 \end{verbatim}
 
-Vektor dapat terdiri dari angka, karakter dan bahkan rangkaian karakter.
+Vektor dapat terdiri dari angka, karakter dan bahkan rangkaian karakter. Contoh:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{omahku }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Malang"}\NormalTok{, }\StringTok{"memang"}\NormalTok{, }\StringTok{"kota"}\NormalTok{, }\StringTok{"yang"}\NormalTok{, }\StringTok{"sueejuk"}\NormalTok{) }\CommentTok{\# perhatikan penggunanaan ""}
-\NormalTok{omahku}
+\NormalTok{studiku }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Fakultas"}\NormalTok{, }\StringTok{"ekonomi"}\NormalTok{, }\StringTok{"dong!"}\NormalTok{, }\StringTok{"memang"}\NormalTok{, }\StringTok{"kereen"}\NormalTok{) }\CommentTok{\# perhatikan penggunanaan ""}
+\NormalTok{studiku}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "Malang"  "memang"  "kota"    "yang"    "sueejuk"
+## [1] "Fakultas" "ekonomi"  "dong!"    "memang"   "kereen"
 \end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{omahku[}\FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{)]}
+\NormalTok{studiku[}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{)]}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "kota"    "yang"    "sueejuk"
+## [1] "Fakultas" "ekonomi"  "dong!"
 \end{verbatim}
-
-Untuk membuat matriks juga dapat dilakukan dengan mudah. Misalnya, \emph{mat.pi.10.5 \textless-matrix(pi, nrow=10,ncol=5)} akan membuat matriks 10 × 5 dengan nama \emph{mat.pi.10.5} dengan semua entri \(\pi\). Sekali lagi, untuk melihat hasilnya, ketik \emph{mat.pi.10.5} dan tekan Enter. R peka penulisan huruf besar-kecil. Jadi mat.pi.10.5 dan mat.Pi.10.5 memiliki arti yang berbeda. Semua perintah menggunakan huruf kecil, kecuali perintah \emph{View()}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{mat.pi.}\FloatTok{10.5} \OtherTok{\textless{}{-}}\FunctionTok{matrix}\NormalTok{(pi, }\AttributeTok{nrow=}\DecValTok{10}\NormalTok{,}\AttributeTok{ncol=}\DecValTok{5}\NormalTok{)}
-\NormalTok{mat.pi.}\FloatTok{10.5}
+\NormalTok{studiku[}\DecValTok{5}\NormalTok{]}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-##           [,1]     [,2]     [,3]     [,4]     [,5]
-##  [1,] 3.141593 3.141593 3.141593 3.141593 3.141593
-##  [2,] 3.141593 3.141593 3.141593 3.141593 3.141593
-##  [3,] 3.141593 3.141593 3.141593 3.141593 3.141593
-##  [4,] 3.141593 3.141593 3.141593 3.141593 3.141593
-##  [5,] 3.141593 3.141593 3.141593 3.141593 3.141593
-##  [6,] 3.141593 3.141593 3.141593 3.141593 3.141593
-##  [7,] 3.141593 3.141593 3.141593 3.141593 3.141593
-##  [8,] 3.141593 3.141593 3.141593 3.141593 3.141593
-##  [9,] 3.141593 3.141593 3.141593 3.141593 3.141593
-## [10,] 3.141593 3.141593 3.141593 3.141593 3.141593
+## [1] "kereen"
+\end{verbatim}
+
+Untuk membuat matriks juga dapat dilakukan dengan mudah. Misalnya, \texttt{mat.pi.4.5\ \textless{}-matrix(pi,\ nrow=4,ncol=5)} adalah perintah untuk membuat matriks dimensi 4 × 5 dengan nama \emph{mat.pi.4.5} dengan semua entri \(\pi\). Sekali lagi, untuk melihat hasilnya, ketik \emph{mat.pi.4.5} dan tekan Enter. R peka penulisan huruf besar-kecil. Jadi \emph{mat.pi.4.5} dan \emph{mat.Pi.4.5} memiliki arti yang berbeda. Hampir semua perintah menggunakan huruf kecil, kecuali perintah \emph{View()} dan beberapa perintah dari \emph{package} tertentu.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mat.pi.}\FloatTok{4.5} \OtherTok{\textless{}{-}}\FunctionTok{matrix}\NormalTok{(pi, }\AttributeTok{nrow=}\DecValTok{4}\NormalTok{,}\AttributeTok{ncol=}\DecValTok{5}\NormalTok{)}
+\NormalTok{mat.pi.}\FloatTok{4.5}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##          [,1]     [,2]     [,3]     [,4]     [,5]
+## [1,] 3.141593 3.141593 3.141593 3.141593 3.141593
+## [2,] 3.141593 3.141593 3.141593 3.141593 3.141593
+## [3,] 3.141593 3.141593 3.141593 3.141593 3.141593
+## [4,] 3.141593 3.141593 3.141593 3.141593 3.141593
 \end{verbatim}
 
 \hypertarget{saatnya-menggunakan-skrip}{%
 \section{Saatnya menggunakan skrip}\label{saatnya-menggunakan-skrip}}
 
-Biasanya penghitungan statistik melibatkan banyak baris kode. Jika demikian kita beralih menggunakan skrip. Untuk memulai skrip baru, Anda dapat mengklik File, New File, lalu R Script atau \textbf{Ctrl+Shift+N}. Maka dilayar RStudio akan muncul layar baru di kiri atas sehingga Anda sekarang punya empat kuadran. Inilah salah satu keunggulan R dibandingkan perangkat lunak analisis \emph{point and click} yaitu Anda dapat menyimpan pekerjaan Anda sebagai skrip. Lihat Gambar \ref{fig:4qu}
+Biasanya penghitungan statistik melibatkan banyak baris kode. Jika demikian saatnya kita beralih menggunakan skrip (\emph{script}). Penggunaan file skrip (file .R) dapat membantu menjalankan beberapa langkah kode sekaligus. File skrip terletak di sudut kiri atas jendela RStudio Anda atau file \emph{source}. Untuk membuat skrip baru, Anda dapat mengklik \emph{File \textgreater{} New File \textgreater{} R Script} atau dengan \emph{shortcut} \textbf{Ctrl+Shift+N}. Maka dilayar RStudio akan muncul layar baru di kiri atas sehingga Anda sekarang punya empat panel. Inilah salah satu keunggulan R dibandingkan perangkat lunak \emph{point and click} yaitu Anda dapat menyimpan pekerjaan Anda sebagai skrip. Lihat Gambar \ref{fig:4qu}!
+
+File \emph{source} memungkinkan Anda mengetikkan kode R dan kemudian mengevaluasinya, sehingga terkadang disebut ``mengirim perintah ke konsol'' - atau memindahkan pernyataan R dari jendela \emph{source} ke konsol. Penggunaan file skrip memungkinkan Anda memperbaiki kesalahan kode dengan lebih cepat dan kemudian menjalankan kembali kode Anda tanpa perlu mengetik ulang semuanya dari awal.
 
 \begin{figure}[H]
 \includegraphics[width=1\linewidth]{figures/4qu} \caption{Antar Muka RStudio dengan Skrip}\label{fig:4qu}
 \end{figure}
 
-Skrip ini setara dengan file sintaks di Stata: skrip menyajikan kode yang diperlukan untuk menghasilkan analisis yang diperlukan oleh pengguna. Anda dapat menyimpan dan membagikan pekerjaan Anda sebagai skrip yang berisi kode yang dapat dijalankan lain waktu. Hal ini sangat berguna sebagai catatan analisis yang Anda lakukan, melakukan verifikasi analisis dan replikasi studi.
+Skrip ini setara dengan file sintaks di Stata: skrip menyajikan kode yang diperlukan untuk menghasilkan analisis yang diperlukan. Anda dapat menyimpan dan membagikan pekerjaan Anda sebagai skrip yang berisi kode yang dapat dijalankan lain waktu. Hal ini sangat berguna sebagai catatan analisis yang Anda lakukan, melakukan verifikasi analisis atau untuk replikasi studi.
 
-Untuk menjalankan kode dalam Skrip R, untuk satu baris kode, letakkan penunjuk tetikus di depan kode, untuk satu blok baris, pilih kode tersebut, lalu klik tombol \emph{Run} atau tekan Ctrl + Enter di Windows sistem.
-
-Perintah dalam Skrip R dapat dengan mudah ditelusuri kembali, dimodifikasi, dan dibagikan dengan rekan kerja. Dalam Skrip R, dimungkinkan untuk menambahkan komentar menggunakan. Segala sesuatu yang mengikuti \# akan dianggap sebagai komentar dan tidak akan dijalankan oleh R.
+Untuk menjalankan kode dalam skrip R, untuk satu baris kode, letakkan tetikus di depan kode, untuk satu blok baris, pilih kode tersebut, lalu klik tombol \emph{Run} atau tekan \texttt{Ctrl\ +\ Enter} di Windows sistem. Dalam skrip R, dimungkinkan untuk menambahkan komentar menggunakan \#. Segala sesuatu setelah tanda \# akan dianggap sebagai komentar dan tidak akan dijalankan oleh R.
 
 Di awal setiap skrip R, sebaiknya diketikkan paket-paket yang diperlukan untuk mengimplementasikan kode dalam file. Setelah menulis kode untuk memuat paket dengan fungsi \emph{library()}, Anda dapat menambahkan, sebagai komentar, kata kunci untuk mengingatkan tentang penggunaan paket. Ini akan membantu kita mengingat isi file dan menjelaskan kepada orang lain apa yang diperlukan untuk mengimplementasikan kode dalam skrip R.
 
-Ini juga merupakan kebiasan baik untuk mendeskripsikan proyek dan menulis komentar singkat di badan fungsi yang kita buat. Sekali lagi ini berguna bagi penulis skrip dan bagi orang ketiga yang akan membaca kode tersebut.
+Ini juga merupakan kebiasan baik untuk mendeskripsikan proyek dan menulis komentar singkat di fungsi-fungsi yang kita buat. Sekali lagi ini berguna bagi penulis skrip dan bagi orang ketiga yang akan membaca kode tersebut.
 
 \hypertarget{manajemen-data-dan-projek-di-r}{%
 \section{Manajemen Data dan Projek di R}\label{manajemen-data-dan-projek-di-r}}
 
 R adalah bahasa pemrograman berorientasi objek. Saat Anda membukanya, Anda memiliki lingkungan (\emph{Environment}) kosong yang dapat diisi dengan objek sebanyak kemampuan memori komputer Anda. Segala sesuatu yang ingin Anda simpan atau manipulasi di lain waktu perlu didefinisikan sebagai objek di lingkungan ini. Termasuk disini file data, objek atau hasil model, grafik, dan sebagainya. Artinya, tidak seperti perangkat lunak statistik standar, yang biasanya hanya mengizinkan analis untuk membuka satu kumpulan data, R memungkinkan analis untuk bekerja dengan beberapa file data secara bersamaan.
 
-Kita bisa mendapatkan direktori kerja saat ini menggunakan fungsi getwd(). Direktori kerja adalah cara kita memberi tahu R di mana mendapatkan file, dan juga di mana mengekspor file. Dengan kata lain, di sinilah R akan beroperasi di dalam komputer kita. Kita dapat mengatur direktori kerja kita dengan menentukan path file ke lokasi yang kita inginkan dengan perintah setwd, atau Anda dapat mengatur jalur menggunakan menu drop-down (Session -\textgreater{} Set Working Directory-\textgreater{} Choose Directory).
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\DocumentationTok{\#\# Working directory di atur ke desktop}
-\FunctionTok{setwd}\NormalTok{(“}\SpecialCharTok{/}\NormalTok{Users}\SpecialCharTok{/}\NormalTok{Username}\SpecialCharTok{/}\NormalTok{Desktop”) }
-\DocumentationTok{\#\# untuk memastikan working directory yang dipakai}
-\FunctionTok{getwd}\NormalTok{() }
-\NormalTok{[}\DecValTok{1}\NormalTok{] “}\SpecialCharTok{/}\NormalTok{Users}\SpecialCharTok{/}\NormalTok{Username}\SpecialCharTok{/}\NormalTok{Desktop” }
-\end{Highlighting}
-\end{Shaded}
-
-Sering kali kita memiliki banyak file data sekaligus yang dimuat di lingkungan kita. Jika demikian manajemen data menjadi penting dalam konteks ini. Saya sangat menyarankan Anda membuat \emph{project} setiap kali Anda memulai pekerjaan yang berbeda, yang tidak terkait dengan pekerjaan sebelumnya. Projek disini adalah tempat untuk menyimpan pekerjaan Anda yang berkaitan dengan projek spesifik.
-
-Untuk membuat proyek klik simbol R di pojok kanan atas, klik \emph{New Directory \textgreater{} New Project} lalu tulis nama direktori (misalnya rstudio4eb) dan klik \emph{Create project}. Ketika Anda sudah berada didalam projek folder, sebaiknya dibuat subfolder tambahan misalnya khusus untuk data, gafik, referensi dan lain-lain. Setelah folder ditentukan, aturlah R ke direktori proyek Anda, sehingga folder itu menjadi lokasi default tempat R mencari file.
-
-Ekstensi file R untuk file data adalah .RData. Anda dapat menyimpan satu atau lebih objek dalam file tersebut menggunakan fungsi simpan (Ctrl + s). Di dalam \emph{RData} tersimpan hasil model, grafik, atau objek apa pun. Hal ini sangat berguna ketika model membutuhkan waktu lama untuk dalam penghitungannya. Hasil tersebut dapat disimpan dan digunakan kembali nanti.
-
-Selain file RData, menyimpan file dalam format .csv juga efektif saat bekerja di R. Ada perintah dasar R untuk mengimpor dan mengekspor file csv (masing-masing \emph{read.csv} dan \emph{write.csv}). R dapat langsung mengimpor data dari paket perangkat lunak statistik lain (SPSS, Stata), namun hal ini memerlukan pengunduhan paket (\emph{package}) yang tidak disertakan dalam instalasi bawaan R. Kita membahas paket di bagian selanjutnya.
+Ekstensi file R untuk file data adalah .RData. Anda dapat menyimpan satu atau lebih objek dalam file tersebut menggunakan fungsi File \textgreater{} Save (Ctrl + S). Lokasi penyimpanan file ini berada di direktori yang sama dengan file proyek \emph{.Rproj} Anda. Di dalam \emph{RData} tersimpan hasil model, grafik, atau objek yang lain. Hal ini sangat berguna ketika model membutuhkan waktu lama untuk dalam penghitungannya. Hasil tersebut dapat disimpan dan digunakan kembali nanti.
 
 \hypertarget{paket-paket-r}{%
 \section{Paket-Paket R}\label{paket-paket-r}}
 
-R bekerja melalui paket termasuk paket dasar dan ribuan paket atau ekstensi. Dengan paket dasar dan ekstensinya, banyak analisis data statistik dapat dilakukan dan grafik statistik kualitas tinggi dihasilkan.
-
-Karena sifatnya yang \emph{open source}, pengguna dapat mengembangkan dan memperluas fitur-fitur dasar R dengan penambahan fungsionalitas. Ketika seseorang ingin menambahkan fungsi tambahan ke R, mereka membuat sebuah paket: fitur tambahan yang dapat diinstal pada mesin pengguna dan kemudian dimuat ke R bila diperlukan. Paket juga dapat menyimpan fungsi dan kumpulan data R.
+R bekerja melalui paket-paket (\emph{packages}) termasuk paket dasar dan ribuan paket tambahan. Paket ini mirip dengan aplikasi di ponsel Anda, yang bisa ditambahkan pada ponsel untuk meningkatkan fungsionalitas ponsel Anda. Paket dibuat oleh pengguna dan dibagikan kepada pengguna lain.
 
 Anda perlu mengunduh paket tertentu untuk menyediakan perintah yang diperlukan dan dapat menjalankan model atau analisis tertentu jika fungsi itu tidak tersedia secara \emph{default}. Paket-paket itu memerlukan tiga langkah untuk menggunakannya. Pertama, kita harus menginstal paket itu sendiri, memuatnya dari \emph{library}, dan terakhir memanggil salah satu fungsi paket tersebut.
 
-Paket dapat diunduh di CRAN (\emph{Comprehensive R Archive Network}) dan dapat diinstal melalui kode \emph{install.packages(``nama paket'')} atau melalui opsi drop-down (\emph{Tools -\textgreater{} Install Package}). Paket di CRAN telah dievaluasi untuk memastikan paket tersebut berfungsi di seluruh platform. Paket bisa juga tersedia bagi pengguna tetapi belum diarsipkan di CRAN tetapi masih berada di Github. Paket tersebut dapat diinstal menggunakan fungsi devtools::install\_ github (Wickham et al. (\protect\hyperlink{ref-wickhamDevtoolsToolsMake2022}{2022})). Untuk setiap sesi R yang baru, paket yang diperlukan perlu dimuat (bukan diinstal ulang, cukup dimuat ulang dengan fungsi \emph{library ()} atau \emph{require()}.
+Paket dapat diunduh di CRAN (\emph{Comprehensive R Archive Network}). Misalnya Anda akan menginstal paket data panel ekonometrik \texttt{plm} (Croissant et al. (\protect\hyperlink{ref-croissantPlmLinearModels2023}{2023})), perintah RStudio berikut akan menginstal paket \texttt{plm} di RStudio versi lokal Anda:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"plm"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+atau bisa juga melalui opsi drop-down (\emph{Tools -\textgreater{} Install Package}). Paket di CRAN telah dievaluasi untuk memastikan paket tersebut berfungsi di seluruh platform.
+
+Paket bisa juga diinstall dari Github yaitu untuk paket-paket yang tidak terdapat di CRAN. Misalnya Anda akan menginstal paket \texttt{rbbt} (Dunnington (\protect\hyperlink{ref-dunningtonPaleolimbotRbbt2023}{2023})) yaitu konektor R ke \emph{Better Bibtex} untuk \emph{Zotero}. Paket tersebut dapat diinstal menggunakan fungsi \texttt{devtools::install\_\ github} (Wickham et al. (\protect\hyperlink{ref-wickhamDevtoolsToolsMake2022}{2022})). Sebelumnya Anda harus menginstall \texttt{devtools} terlebih dahulu.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{)}
+\FunctionTok{require}\NormalTok{(devtools)}
+\NormalTok{devtools}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"paleolimbot/rbbt"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Sekali sebuah paket sudah diinstal, maka tidak perlu diinstal lagi seperti halnya aplikasi di ponsel Anda. Tetapi perlu diupdate secara rutin karena pengembang paket tersebut mungkin menambahkan fungsionalitas baru. Untuk mengupdate gunakan opsi drop-down (\emph{Tools -\textgreater{} Check for Package Updates}).
+
+RStudio tidak menyimpan paket yang terinstal di memori kerja aktifnya ketika dimatikan. Oleh karena itu, untuk setiap sesi R yang baru, paket yang diperlukan perlu dimuat (\textbf{bukan diinstal ulang, cukup dimuat ulang}) dengan fungsi \texttt{library\ ("nama-paket")} atau \texttt{require("nama-paket")}.
 
 \hypertarget{mengimpor-data-ke-dalam-r}{%
 \section{Mengimpor Data ke dalam R}\label{mengimpor-data-ke-dalam-r}}
 
-Dalam pelaksanaan analisis data, data sering kali disimpan dalam berbagai format. R dapat membaca berbagai jenis file data seperti free format text files, comma separated value ﬁles (csv), file Excel, file SPSS, file SAS, dan file Stata. Mengimpornya ke dalam R juga mudah. Kita dapat mengimpor .csv file menggunakan basis R. Tetapi jika data dalam format lain, kita perlu menginstal paket untuk mengimpor data misalnya paket \emph{foreign} (Team et al. (\protect\hyperlink{ref-rcoreteamForeignReadData2023}{2023})) yang berfungsi untuk membaca dan menulis file data dari SAS, SPSS dan Stata. Saat memasukkan nama file, jangan lupa untuk menempatkan nama file diantara tanda kutip (``nama-file.csv'').
+Dalam praktik analisis data, sering kali data disimpan dalam berbagai format. Selain itu kita mungkin tidak memasukkan data langsung ke R, tetapi menggunakan ke worksheet seperti \emph{Google Sheets} atau bahkan menggunakan program statistik seperti SPSS. R dapat membaca berbagai jenis file data seperti free format text files (txt), comma separated value ﬁles (csv), file Excel, file SPSS, file SAS, dan file Stata.
+
+Data yang disimpan dalam file csv dapat diunggah ke RStudio dengan dua cara yang relatif sederhana:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Untuk file yang disimpan secara lokal di folder projek pengguna, perintah \texttt{read.csv} akan mengunggah file tersebut. Sebagai contoh, memasukkan perintah berikut akan mengunggah dan menyimpan file csv bernama \emph{inequality.csv} di RStudio:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ineqdata }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"inequality.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Dalam contoh ini, perhatikan sintaksisnya: setelah perintah \texttt{read.csv} dan tanda kurung buka, nama file diberikan di dalam tanda kutip diikuti dengan tanda kurung tutup. Selain itu, data disimpan dengan nama \emph{ineqdata} dengan menggunakan inisial ineqdata \textless-. Data set harus diberi nama sedemikian rupa sehingga dapat direferensikan dalam perintah berikutnya, di mana pilihan nama yang sesuai ditentukan oleh pengguna, bergantung pada konteksnya.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Jika data dalam format lain, kita perlu menginstal paket untuk mengimpor data misalnya paket \emph{foreign} (Team et al. (\protect\hyperlink{ref-rcoreteamForeignReadData2023}{2023})) yang berfungsi untuk membaca dan menulis file data dari SAS, SPSS dan Stata. Paket ini dapat diinstal dengan perintah \texttt{install.packages("foreign")}. Untuk melakukan impor klik \emph{File \textgreater{} Import Dataset \textgreater{} From Excel, From Stata, From SPSS} dan lain-lain, pilih sesuai jenis data Anda.
+\end{enumerate}
+
+\hypertarget{bantuan-tambahan}{%
+\section{Bantuan Tambahan}\label{bantuan-tambahan}}
+
+Fitur \emph{Help} di dalam RStudio adalah bagian yang sangat membantu untuk mempelajari cara menggunakan perintah-perintah tertentu di RStudio. Anda sangat disarankan untuk mengeksplorasi lebih lanjut panel \emph{Help} yang terletak di kanan bawah RStudio standar. Selain itu ada banyak rujukan bagus untuk mempelajari R dan RStudio misalnya Crawley (\protect\hyperlink{ref-crawleyBook2012}{2012}), Wickham \& Grolemund (\protect\hyperlink{ref-wickhamDataScience2017}{2017}) dan Verzani (\protect\hyperlink{ref-verzaniGettingStartedRStudio2011}{2011}). Banyak juga rujukan lain yang bisa diakses secara \emph{online}.
 
 \startappendices
 
@@ -735,11 +833,20 @@ Dalam pelaksanaan analisis data, data sering kali disimpan dalam berbagai format
 \leavevmode\vadjust pre{\hypertarget{ref-crawleyBook2012}{}}%
 Crawley, M. J. (2012). \emph{The {R Book}} (2nd edition). {Wiley}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-croissantPlmLinearModels2023}{}}%
+Croissant, Y., Millo, G., Tappe, K., Toomet, O., Kleiber, C., Zeileis, A., Henningsen, A., Andronic, L., \& Schoenfelder, N. (2023). \emph{Plm: {Linear Models} for {Panel Data}}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-dalgaardIntroductoryStatistics2008}{}}%
 Dalgaard, P. (2008). \emph{Introductory {Statistics} with {R}}. {Springer}. \url{https://doi.org/10.1007/978-0-387-79054-1}
 
+\leavevmode\vadjust pre{\hypertarget{ref-dunningtonPaleolimbotRbbt2023}{}}%
+Dunnington, D. (2023). \emph{Paleolimbot/rbbt}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-ismayStatisticalInferenceData2019}{}}%
 Ismay, C., \& Kim, A. Y. (2019). \emph{Statistical {Inference} via {Data Science}: {A ModernDive} into {R} and the {Tidyverse}}. {CRC Press}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-rcoreteamLanguageEnvironmentStatistical2023}{}}%
+Team, R. C. (2023). \emph{R: {A Language} and {Environment} for {Statistical Computing}}. R Foundation for Statistical Computing.
 
 \leavevmode\vadjust pre{\hypertarget{ref-rcoreteamForeignReadData2023}{}}%
 Team, R. C., Bivand, R., Carey, V. J., DebRoy, S., Eglen, S., Guha, R., Herbrandt, S., Lewin-Koh, N., Myatt, M., Nelson, M., Pfaff, B., Quistorff, B., Warmerdam, F., Weigand, S., Foundation, F. S., \& Inc. (2023). \emph{Foreign: {Read Data Stored} by '{Minitab}', '{S}', '{SAS}', '{SPSS}', '{Stata}', '{Systat}', '{Weka}', '{dBase}', ...}
