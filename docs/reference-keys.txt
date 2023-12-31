@@ -1,0 +1,14 @@
+fig:rgui
+fig:3qu
+fig:4qu
+pengenalan-r-dan-rstudio
+tata-letak-rstudio
+membuat-projek
+r-dalam-gaya-tanya-jawab
+vektor
+saatnya-menggunakan-skrip
+manajemen-data-dan-projek-di-r
+paket-paket-r
+mengimpor-data-ke-dalam-r
+bantuan-tambahan
+beberapa-rujukan-untuk-belajar-r
