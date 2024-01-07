@@ -2,7 +2,7 @@
 
 ::: {.row}
 :::::: {.col-sm-6}
-Selamat datang di buku RStudio untuk Bisnis dan Ekonomi. Buku ini dibuat dengan templet [`oxforddown`](https://github.com/ulyngs/oxforddown). 
+Selamat datang di buku Analisis Ekonomi dan Keuangan dengan RStudio. Buku ini dibuat dengan templet [`oxforddown`](https://github.com/ulyngs/oxforddown). 
 Untuk melihat/mengunduh  versi PDF, [klik disini](_main.pdf) (atau klik cover buku).
 Selamat membaca!
 

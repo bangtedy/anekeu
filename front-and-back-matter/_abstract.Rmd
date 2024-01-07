@@ -4,9 +4,9 @@ editor_options:
     wrap: 72
 ---
 
-Buku ini merupakan *pengantar* cara melakukan analisis ekonomi dan bisnis secara kuantitatif dengan menggunakan R dan RStudio. Persoalan yang dibahas umumnya tingkat S1 atau S2. 
+Buku ini berisi berbagai kasus analisis ekonomi dan keuangan dengan menggunakan R dan RStudio. Materi yang dibahas pada umumnya berada pada level S1 atau S2. 
 
 Saya berharap pembaca dapat mengambil satu gagasan dari buku ini dalam melakukan investigasi ekonomi dan bisnis secara kuantitatif: data dan alat-alat analisis tidak sempurna. Namun, ketika kita memahami kekuatan dan kelemahan alat-alat ini, kita dapat menggunakannya untuk menemukan hal-hal menarik di dalam ekonomi dan bisnis.
 
-Jangan ragu untuk menghubungi saya dengan pemikiran Anda tentang buku ini, ide perbaikan/materi tambahan atau mungkin kesalahan yang Anda temukan di buku ini.
+Jika Anda punya ide untuk perbaikan, tambahan materi atau menemukan kesalahan di buku ini silakan menghubungi saya. Terima kasih.
 

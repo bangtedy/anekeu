@@ -69,7 +69,7 @@ Selanjutnya kita mungkin ingin memberi nama dan menyimpan hasil perhitungan seba
 
 ```{r variabel, echo=TRUE}
 tilu <- 1+2
-tilu # memanggil variabel opat
+tilu # memanggil variabel tilu
 opat = 2+2
 opat
 ```
