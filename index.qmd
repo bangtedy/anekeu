@@ -10,11 +10,9 @@ January 2024
 
 ## Sinopsis {.unnumbered}
 
-Buku ini berisi berbagai kasus analisis ekonomi dan keuangan dengan menggunakan R dan RStudio.
-Materi yang dibahas pada umumnya berada pada level S1 atau S2.
+Buku ini berisi berbagai kasus analisis ekonomi dan keuangan dengan menggunakan R dan RStudio. Materi yang dibahas untuk mahasiswa S1 atau S2.
 
-Saya berharap pembaca dapat mengambil satu gagasan dari buku ini dalam melakukan investigasi ekonomi dan bisnis secara kuantitatif: data dan alat-alat analisis tidak sempurna.
-Namun, ketika kita memahami kekuatan dan kelemahan alat-alat ini, kita dapat menggunakannya untuk menemukan hal-hal menarik di dalam ekonomi dan bisnis.
+Saya berharap pembaca dapat mengambil satu gagasan dari buku ini dalam melakukan investigasi ekonomi dan keuangan secara kuantitatif: data dan alat-alat analisis tidak sempurna. Namun, ketika kita memahami kekuatan dan kelemahan alat-alat ini, kita dapat menggunakannya untuk menemukan hal-hal menarik di dalam ekonomi dan keuangan.
 
 Jika Anda punya ide untuk perbaikan, tambahan materi atau menemukan kesalahan di buku ini silakan menghubungi saya.
 Terima kasih.
