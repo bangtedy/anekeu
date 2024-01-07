@@ -1,0 +1,45 @@
+project:
+  type: book
+  output-dir: docs
+
+#lang: fr
+language: _language.yml   # customized, "tableau" plutôt que "table", etc.
+
+book:
+  title: "Analisis Ekonomi dan Keuangan dengan RStudio"
+  reader-mode: true
+
+  page-footer:
+    left: |
+      Analisis Ekonomi dan Keuangan dengan RStudio ditulis oleh Tedy Herlambang.
+    right: |
+      Buku ini dibuat menggunakan <a href="https://quarto.org/">Quarto</a>.
+  cover-image: cover.jpg
+  favicon: cover.jpg
+  site-url: https://bangtedy.github.io/anekeu/
+  repo-url: https://github.com/bangtedy/anekeu
+  repo-branch: main
+  repo-actions: [edit, issue]
+  chapters:
+    - index.qmd
+
+    #- preface-2e.qmd
+    - intro.qmd
+    - references.qmd
+format:
+  docx:
+    reference-doc: custom-reference-doc-arial.docx
+  #pdf:
+    #mainfont: Arial
+  html:
+    theme:
+      - cosmo
+      - r4ds.scss
+    code-link: true
+
+    author-meta: "Tedy Herlambang"
+    #include-in-header: "plausible.html"
+    callout-appearance: simple
+bibliography: [bibliography/references.bib, bibliography/anekeu.bib]
+editor: source
+
