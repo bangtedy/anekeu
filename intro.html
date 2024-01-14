@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="Tedy Herlambang">
-<title>Analisis Ekonomi dan Keuangan dengan RStudio - 1&nbsp; Pengenalan R dan RStudio</title>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="quarto-1.3.450" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+<meta name="author" content="Tedy Herlambang" />
+
+<title>Analisis Ekonomi dan Keuangan dengan RStudio – 1  Pengenalan R dan RStudio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,25 +78,8 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./gender.html" rel="next">
-<link href="./index.html" rel="prev">
-<link href="./cover.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<!-- htmldependencies:E3FAD763 -->
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -110,27 +98,45 @@ div.csl-indent {
     "search-submit-button-title": "Envoyer",
     "search-label": "Search"
   }
-}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
 </head>
-<body class="nav-sidebar floating">
+
+<body>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn"
+      data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" 
+      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
+      onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Pengenalan R dan RStudio</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      <h1 class="quarto-secondary-nav-title"></h1>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" 
+      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
+      onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Analisis Ekonomi dan Keuangan dengan RStudio</a> 
+      <a href="/">
+      Analisis Ekonomi dan Keuangan dengan RStudio
+      </a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/bangtedy/anekeu" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -148,60 +154,50 @@ div.csl-indent {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sinopsis</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Pengenalan R dan RStudio</span></span></a>
+  <a href="/intro.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class='chapter-number'>1</span>  <span class='chapter-title'>Pengenalan R dan RStudio</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gender.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ketimpangan Gender dan Pertumbuhan Ekonomi</span></span></a>
+  <a href="/gender.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>2</span>  <span class='chapter-title'>Ketimpangan Gender dan Pertumbuhan Ekonomi</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./spasial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dampak spasial pertumbuhan ekonomi, pencemaran lingkungan dan ketimpangan pendapatan di provinsi Indonesia</span></span></a>
+  <a href="/spasial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class='chapter-number'>3</span>  <span class='chapter-title'>Dampak spasial pertumbuhan ekonomi, pencemaran lingkungan dan ketimpangan pendapatan di provinsi Indonesia</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Referensi</span></a>
   </div>
 </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" ></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Isi bab ini</h2>
-   
-  <ul>
-<li><a href="#tata-letak-rstudio" id="toc-tata-letak-rstudio" class="nav-link active" data-scroll-target="#tata-letak-rstudio"><span class="header-section-number">1.1</span> Tata Letak RStudio</a></li>
-  <li><a href="#membuat-projek" id="toc-membuat-projek" class="nav-link" data-scroll-target="#membuat-projek"><span class="header-section-number">1.2</span> Membuat Projek</a></li>
-  <li><a href="#r-dalam-gaya-tanya-jawab" id="toc-r-dalam-gaya-tanya-jawab" class="nav-link" data-scroll-target="#r-dalam-gaya-tanya-jawab"><span class="header-section-number">1.3</span> R dalam Gaya “Tanya Jawab”</a></li>
-  <li><a href="#vektor" id="toc-vektor" class="nav-link" data-scroll-target="#vektor"><span class="header-section-number">1.4</span> Vektor</a></li>
-  <li><a href="#saatnya-menggunakan-skrip" id="toc-saatnya-menggunakan-skrip" class="nav-link" data-scroll-target="#saatnya-menggunakan-skrip"><span class="header-section-number">1.5</span> Saatnya menggunakan skrip</a></li>
-  <li><a href="#manajemen-data-dan-projek-di-r" id="toc-manajemen-data-dan-projek-di-r" class="nav-link" data-scroll-target="#manajemen-data-dan-projek-di-r"><span class="header-section-number">1.6</span> Manajemen Data dan Projek di R</a></li>
-  <li><a href="#paket-paket-r" id="toc-paket-paket-r" class="nav-link" data-scroll-target="#paket-paket-r"><span class="header-section-number">1.7</span> Paket-Paket R</a></li>
-  <li><a href="#mengimpor-data-ke-dalam-r" id="toc-mengimpor-data-ke-dalam-r" class="nav-link" data-scroll-target="#mengimpor-data-ke-dalam-r"><span class="header-section-number">1.8</span> Mengimpor Data ke dalam R</a></li>
-  <li><a href="#fitur-help" id="toc-fitur-help" class="nav-link" data-scroll-target="#fitur-help"><span class="header-section-number">1.9</span> Fitur Help</a></li>
-  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bangtedy/anekeu/edit/main/intro.qmd" class="toc-action">Edit halaman ini</a></p><p><a href="https://github.com/bangtedy/anekeu/issues/new" class="toc-action">Laporkan kesalahan</a></p></div></div></nav>
+        <div id="quarto-toc-target"></div>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">
-<span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Pengenalan R dan RStudio</span>
-</h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>  <span class="chapter-title">Pengenalan R dan RStudio</span></h1>
 </div>
 
 
@@ -214,25 +210,43 @@ div.csl-indent {
   </div>
   
 
-</header><p><!-- this will include a mini table of contents--></p>
+</header>
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Isi bab ini</h2>
+   
+  <ul>
+  <li><a href="#tata-letak-rstudio" id="toc-tata-letak-rstudio"><span class="header-section-number">1.1</span> Tata Letak RStudio</a></li>
+  <li><a href="#membuat-projek" id="toc-membuat-projek"><span class="header-section-number">1.2</span> Membuat Projek</a></li>
+  <li><a href="#r-dalam-gaya-tanya-jawab" id="toc-r-dalam-gaya-tanya-jawab"><span class="header-section-number">1.3</span> R dalam Gaya “Tanya Jawab”</a></li>
+  <li><a href="#vektor" id="toc-vektor"><span class="header-section-number">1.4</span> Vektor</a></li>
+  <li><a href="#saatnya-menggunakan-skrip" id="toc-saatnya-menggunakan-skrip"><span class="header-section-number">1.5</span> Saatnya menggunakan skrip</a></li>
+  <li><a href="#manajemen-data-dan-projek-di-r" id="toc-manajemen-data-dan-projek-di-r"><span class="header-section-number">1.6</span> Manajemen Data dan Projek di R</a></li>
+  <li><a href="#paket-paket-r" id="toc-paket-paket-r"><span class="header-section-number">1.7</span> Paket-Paket R</a></li>
+  <li><a href="#mengimpor-data-ke-dalam-r" id="toc-mengimpor-data-ke-dalam-r"><span class="header-section-number">1.8</span> Mengimpor Data ke dalam R</a></li>
+  <li><a href="#fitur-help" id="toc-fitur-help"><span class="header-section-number">1.9</span> Fitur Help</a></li>
+  </ul>
+</nav>
+<p><!-- this will include a mini table of contents--></p>
 
 <!-- For PDF output, include these two LaTeX commands after unnumbered chapter headings, otherwise the mini table of contents and the running header will show the previous chapter -->
-<p>Alat utama yang akan kita gunakan untuk analisis ekonomi dan keuangan dalam buku ini adalah <code>R</code> (<span class="citation" data-cites="rcoreteamLanguageEnvironmentStatistical2023">Team (<a href="references.html#ref-rcoreteamLanguageEnvironmentStatistical2023" role="doc-biblioref">2023</a>)</span>) dan <a href="https://posit.co/download/rstudio-desktop/"><code>RStudio</code></a>. RStudio bukan R, juga tidak menyertakan R saat Anda mengunduh dan menginstalnya. Oleh karena itu, R dan RStudio perlu diunduh dan diinstal terpisah.</p>
+<p>Alat utama yang akan kita gunakan untuk analisis ekonomi dan keuangan dalam buku ini adalah <code>R</code> (<span class="citation" data-cites="rcoreteamLanguageEnvironmentStatistical2023">Team (<a href="#ref-rcoreteamLanguageEnvironmentStatistical2023" role="doc-biblioref">2023</a>)</span>) dan <a href="https://posit.co/download/rstudio-desktop/"><code>RStudio</code></a>. RStudio bukan R, juga tidak menyertakan R saat Anda mengunduh dan menginstalnya. Oleh karena itu, R dan RStudio perlu diunduh dan diinstal terpisah.</p>
 <p>R dapat diunduh di <a href="http://www.r-project.org/">R Project for Statistical Computing</a>. Di situs ini juga terdapat tautan ke buku, manual, <em>R Journal</em> dan lain-lain untuk belajar R. Silakan unduh R di situs ini sesuai dengan platform komputasi Anda Windows, Macintosh atau Unix. Gratis! Sedangkan untuk menginstal RStudio silakan kunjungi <a href="https://posit.co/download/rstudio-desktop/">posit</a>. Silakan unduh <em>RStudio Desktop</em> dari situs ini. Juga gratis! Untuk pengenalan ini, saya berasumsi bahwa Anda telah mengunduh dan menginstal R dan RStudio di komputer Anda.</p>
-<p>R tidak punya pengembang antarmuka pengguna grafis (GUI) yang sesuai dengan keinginan pengguna seperti halnya program SPSS atau Stata. GUI bawaan R terlihat lebih mirip dengan konsol DOS lama (lihat <a href="#fig-rgui">Gambar&nbsp;<span>1.1</span></a>). Oleh karena itu, dalam buku ini kita akan fokus menggunakan R melalui antarmuka <em>RStudio</em>. Dengan RStudio, R lebih mudah digunakan dan lebih mirip dengan program SPSS atau Stata.</p>
+<p>R tidak punya pengembang antarmuka pengguna grafis (GUI) yang sesuai dengan keinginan pengguna seperti halnya program SPSS atau Stata. GUI bawaan R terlihat lebih mirip dengan konsol DOS lama (lihat <a href="#fig-rgui">Gambar <span class="quarto-unresolved-ref">fig-rgui</span></a>). Oleh karena itu, dalam buku ini kita akan fokus menggunakan R melalui antarmuka <em>RStudio</em>. Dengan RStudio, R lebih mudah digunakan dan lebih mirip dengan program SPSS atau Stata.</p>
 <div class="cell" data-fig-cap-location="bottom">
 <div class="cell-output-display">
-<div id="fig-rgui" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="figures/console432.png" class="img-fluid figure-img" width="512"></p>
-<figcaption class="figure-caption">Gambar&nbsp;1.1: GUI R</figcaption></figure>
+<div id="fig-rgui" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="figures/console432.png" class="img-fluid" width="512" /></p>
+<figcaption>Gambar 1.1: GUI R</figcaption>
+</figure>
 </div>
 </div>
 </div>
-<p>Hubungan antara R dan RStudio seperti mesin mobil dan dashboard (<span class="citation" data-cites="ismayStatisticalInferenceData2019">Ismay and Kim (<a href="references.html#ref-ismayStatisticalInferenceData2019" role="doc-biblioref">2019</a>)</span>). Bahasa R dapat diumpamakan sebagai mesin mobil, sedangkan RStudio sebagai dasbornya sehingga kita mudah mengkonfigurasi dan mengontrol kerja mesin.</p>
+<p>Hubungan antara R dan RStudio seperti mesin mobil dan dashboard (<span class="citation" data-cites="ismayStatisticalInferenceData2019">Ismay and Kim (<a href="#ref-ismayStatisticalInferenceData2019" role="doc-biblioref">2019</a>)</span>). Bahasa R dapat diumpamakan sebagai mesin mobil, sedangkan RStudio sebagai dasbornya sehingga kita mudah mengkonfigurasi dan mengontrol kerja mesin.</p>
 <p>Di buku ini, saya tidak menunjukkan fitur-fitur R dan RStudio yang sangat banyak secara mendetil. Bab ini hanya berisi contoh mengoperasikan R dan RStudio, metode untuk menginstal paket R dan paket pihak ketiga yang diperlukan untuk digunakan dalam buku ini di bab berikutnya.</p>
-<section id="tata-letak-rstudio" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="tata-letak-rstudio">
-<span class="header-section-number">1.1</span> Tata Letak RStudio</h2>
-<p>Sebagai permulaan, kita akan mempelajari tata letak RStudio dan elemen inti yang akan kita gunakan. Saat Anda memulai RStudio untuk pertama kalinya, Anda akan melihat tiga panel (lihat <a href="#fig-3qu">Gambar&nbsp;<span>1.2</span></a>).</p>
+<section id="tata-letak-rstudio" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Tata Letak RStudio</h2>
+<p>Sebagai permulaan, kita akan mempelajari tata letak RStudio dan elemen inti yang akan kita gunakan. Saat Anda memulai RStudio untuk pertama kalinya, Anda akan melihat tiga panel (lihat <a href="#fig-3qu">Gambar <span class="quarto-unresolved-ref">fig-3qu</span></a>).</p>
 <ol type="1">
 <li>Panel kiri menunjukkan konsol R. Panel ini seperti GUI R yang kita lihat sebelumnnya. Di panel ini kita bisa mengetikkan perintah untuk R.</li>
 <li>Panel kanan atas berisi lima tab: <em>Environment, History, Connections, Build</em> dan <em>Tutorial</em>. Di dalam Environment semua kumpulan data, variabel, model, objek, dan plot akan disimpan.</li>
@@ -240,14 +254,17 @@ div.csl-indent {
 </ol>
 <div class="cell" data-fig-cap-location="bottom">
 <div class="cell-output-display">
-<div id="fig-3qu" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="figures/3qu.png" class="img-fluid figure-img" width="682"></p>
-<figcaption class="figure-caption">Gambar&nbsp;1.2: Antar Muka RStudio</figcaption></figure>
+<div id="fig-3qu" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="figures/3qu.png" class="img-fluid" width="682" /></p>
+<figcaption>Gambar 1.2: Antar Muka RStudio</figcaption>
+</figure>
 </div>
 </div>
 </div>
-</section><section id="membuat-projek" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="membuat-projek">
-<span class="header-section-number">1.2</span> Membuat Projek</h2>
+</section>
+<section id="membuat-projek" class="level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span> Membuat Projek</h2>
 <p>Setelah Anda membuka RStudio, langkah pertama yang sebaiknya Anda lakukan adalah membuat file projek. Sebuah projek adalah tempat terpusat untuk semua objek, grafik dan skrip untuk projek kita. Dengan membuat projek, kita tidak perlu memikirkan lagi direktori kerja untuk menyimpan perhitungan, file, history dan data. Semua akan disimpan di dalam folder projek ini.</p>
 <p>Folder projek ini dapat disamakan dengan folder fisik tempat Anda menyimpan riset topik tertentu (misal projek <em>economic growth</em>, <em>financial engineering</em>). Masing-masing projek harus dibuatkan folder terpisah. Saat Anda ingin mengerjakan projek, Anda membuka folder Anda (dan menutup projek Anda setelah selesai). Saat kembali, Anda dapat membuka kembali folder dan melanjutkan dari bagian terakhir yang Anda tinggalkan. Projek RStudio juga serupa dalam hal itu.</p>
 <p>Langkah-langkah untuk membuat sebuah projek adalah:</p>
@@ -257,127 +274,130 @@ div.csl-indent {
 <li>Di tahap berikutnya pilih “New Directory” atau “Existing Directory”. Tergantung pada opsi yang Anda pilih, Anda akan memiliki beberapa pilihan di mana Anda ingin menempatkan proyek ini.</li>
 <li>Selanjutnya beri nama projek sesuka Anda.</li>
 <li>Klik tombol “Create Project”.</li>
-</ol></section><section id="r-dalam-gaya-tanya-jawab" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="r-dalam-gaya-tanya-jawab">
-<span class="header-section-number">1.3</span> R dalam Gaya “Tanya Jawab”</h2>
-<p>Kita dapat menggunakan R secara interaktif atau R dalam gaya “tanya jawab” (<span class="citation" data-cites="dalgaardIntroductoryStatistics2008">Dalgaard (<a href="references.html#ref-dalgaardIntroductoryStatistics2008" role="doc-biblioref">2008</a>)</span>). Caranya dengan mengetik langsung di konsol panel di sebelah kiri (lihat <a href="#fig-3qu">Gambar&nbsp;<span>1.2</span></a>). Kita menggunakan gaya ini ketika hanya penghitungan rumus tunggal yang diperlukan.</p>
+</ol>
+</section>
+<section id="r-dalam-gaya-tanya-jawab" class="level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span> R dalam Gaya “Tanya Jawab”</h2>
+<p>Kita dapat menggunakan R secara interaktif atau R dalam gaya “tanya jawab” (<span class="citation" data-cites="dalgaardIntroductoryStatistics2008">Dalgaard (<a href="#ref-dalgaardIntroductoryStatistics2008" role="doc-biblioref">2008</a>)</span>). Caranya dengan mengetik langsung di konsol panel di sebelah kiri (lihat <a href="#fig-3qu">Gambar <span class="quarto-unresolved-ref">fig-3qu</span></a>). Kita menggunakan gaya ini ketika hanya penghitungan rumus tunggal yang diperlukan.</p>
 <p>R berorientasi objek, artinya kita dapat membuat objek dalam sesi R, dan memanipulasi objek tersebut berdasarkan namanya. Sebagai ilustrasi, misalnya Anda ingin menghitung 1 + 2, kita tulis setelah <strong>&gt;</strong> <em>1+2</em> dan tekan <strong>Enter</strong>. Hasilnya tigakan? Urutan aturan operasi berlaku dan banyak fungsi matematika lain seperti akar kuadrat, <code>sqrt</code>, juga dapat diterapkan seperti yang diperlihatkan di contoh berikutnya.</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span><span class="op">+</span><span class="fl">2</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">2</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">/</span> <span class="op">(</span><span class="fl">2</span> <span class="op">+</span> <span class="fl">15</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1.5</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">+</span> <span class="dv">15</span>) <span class="sc">-</span> <span class="fl">1.5</span> <span class="sc">+</span> <span class="fu">sqrt</span>(<span class="dv">3</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.2908743</code></pre>
 </div>
 </div>
 <p>Selanjutnya kita mungkin ingin memberi nama dan menyimpan hasil perhitungan yang kita lakukan sebagai objek atau variabel. Misalnya <em>tilu</em> sebagai evaluasi ekspresi 1 + 2, lalu mencetaknya. Maka kita tuliskan <code>tilu &lt;- 1+2</code>. Artinya komputer menghitung 1 + 2 dan menyimpan hasilnya dalam variabel bernama tilu Pada saat kita mengetikkan <code>tilu &lt;- 1+2</code>, dan menekan Enter, seolah-olah tidak terjadi apa-apa pada RStudio. Untuk memanggil variabel tilu kita ketikkan lagi tilu dan tekan Enter. Perhatikan operator penugasan <strong>&lt;-</strong> sebagai ciri khas R, walaupun kita bisa juga menggunakan tanda =. Perhatikan di buku ini perintah ditampilkan dalam kotak abu-abu, sedangkan luarannya ada dibawahnya diawali [1] atau [1,]. Dengan cara yang sama kita membuat variabel <code>opat = 2+2</code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tilu</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">+</span><span class="fl">2</span></span>
-<span><span class="va">tilu</span> <span class="co"># memanggil variabel tilu</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tilu <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">+</span><span class="dv">2</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>tilu <span class="co"># memanggil variabel tilu</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">opat</span> <span class="op">=</span> <span class="fl">2</span><span class="op">+</span><span class="fl">2</span></span>
-<span><span class="va">opat</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>opat <span class="ot">=</span> <span class="dv">2</span><span class="sc">+</span><span class="dv">2</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>opat</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4</code></pre>
 </div>
 </div>
 <p>Setelah kita mendefinisikan suatu variabel, kita dapat melakukan perhitungan lanjutan dengan variabel tersebut. Di dalam penelitian ekonomi dan keuangan hal ini sering kita lakukan misalnya menghitung <em>return</em> saham, GDP perkapita, inflasi dan lain-lain, yang baru bisa kita dapatkan setelah melakukan penghitungan lanjutan dari data mentah yang didapat.</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">opat</span><span class="op">^</span><span class="fl">2</span> <span class="co"># variabel opat dikuadratkan</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>opat<span class="sc">^</span><span class="dv">2</span> <span class="co"># variabel opat dikuadratkan</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 16</code></pre>
 </div>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">tilu</span><span class="op">)</span> <span class="co">#variabel tilu dilogaritma</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(tilu) <span class="co">#variabel tilu dilogaritma</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.098612</code></pre>
 </div>
 </div>
 <p>Operasi lain yang bisa dilakukan antara lain aritmatika (+, -, /, ^,…), operator perbandingan (==, &lt;=,…), operator logika (&amp;, |, !,…) dan fungsi matematika dasar seperti sin, cos, exp dan sqrt.</p>
-</section><section id="vektor" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="vektor">
-<span class="header-section-number">1.4</span> Vektor</h2>
+</section>
+<section id="vektor" class="level2" data-number="1.4">
+<h2 data-number="1.4"><span class="header-section-number">1.4</span> Vektor</h2>
 <p>Variabel paling dasar dalam R adalah vektor. Vektor R adalah barisan nilai yang bertipe sama. Misalnya, untuk membuat vektor lima dimensi beranggotakan angka 10, dan kita beri nama <em>lima10</em>, maka ketikkan <code>lima10 &lt;-rep(10,5)</code> di konsol dan tekan Enter. Maka lima10 adalah vektor dengan lima elemen masing-masing 10; untuk melihatnya kita ketik <code>lima10</code> dan tekan Enter. Fungsi <em>rep</em> merupakan fungsi khusus dari R yang merupakan kependekan dari pengulangan (repeat). Argumennya ditulis sebagai <em>rep(apa yang diulang, berapa kali pengulangan)</em>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">lima10</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">10</span>,<span class="fl">5</span><span class="op">)</span></span>
-<span><span class="va">lima10</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>lima10 <span class="ot">&lt;-</span><span class="fu">rep</span>(<span class="dv">10</span>,<span class="dv">5</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>lima10</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10 10 10 10 10</code></pre>
 </div>
 </div>
 <p>Jika a dan b bilangan bulat, perintah a:b akan membuat vektor bilangan bulat dari a ke b.</p>
 <div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">vektor17</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">7</span></span>
-<span><span class="va">vektor17</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>vektor17 <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>vektor17</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2 3 4 5 6 7</code></pre>
 </div>
 </div>
 <p>Untuk lebih bisa mengontrol vektor yang dibuat, Anda gunakan perintah <code>seq</code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sek305</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">30</span>,<span class="fl">5</span><span class="op">)</span> <span class="co"># membuat vektor bilangan dari 1-30 dengan beda 5</span></span>
-<span><span class="va">sek305</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>sek305 <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">30</span>,<span class="dv">5</span>) <span class="co"># membuat vektor bilangan dari 1-30 dengan beda 5</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>sek305</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  1  6 11 16 21 26</code></pre>
 </div>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sek301</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">30</span>,<span class="fl">1</span>,<span class="op">-</span><span class="fl">5</span><span class="op">)</span> <span class="co"># membuat vektor bilangan dari 30-1 dengan beda -5</span></span>
-<span><span class="va">sek301</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>sek301 <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">30</span>,<span class="dv">1</span>,<span class="sc">-</span><span class="dv">5</span>) <span class="co"># membuat vektor bilangan dari 30-1 dengan beda -5</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>sek301</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 30 25 20 15 10  5</code></pre>
 </div>
 </div>
 <p>Elemen vektor dapat diindeks dengan tanda kurung [ ]. Argumen braket dapat berupa bilangan bulat tunggal atau vektor.</p>
 <div class="cell">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sek305</span><span class="op">[</span><span class="fl">4</span><span class="op">]</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>sek305[<span class="dv">4</span>]</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 16</code></pre>
 </div>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sek305</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>sek305[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  1  6 11 16</code></pre>
 </div>
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sek305</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">4</span>,<span class="fl">5</span>,<span class="fl">10</span><span class="op">)</span><span class="op">]</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sek305[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">10</span>)]</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  1 16 21 NA</code></pre>
 </div>
 </div>
 <p>Untuk perintah terakhir saya meminta elemen vektor <em>sek305</em> yang pertama, keempat, kelima, dan kesepuluh. Karena tidak ada elemen kesepuluh di dalam vektor sek305, maka hasilnya NA (<em>not available</em>). Seringkali kita juga ingin mencari elemen suatu vektor yang memenuhi suatu kondisi tertentu, misalnya elemen sek305 yang kurang dari 10. Hal ini dilakukan dengan meminta indeks yang memenuhi</p>
 <div class="cell">
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sek305</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>sek305</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  1  6 11 16 21 26</code></pre>
 </div>
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">sek305</span> <span class="op">&lt;</span> <span class="fl">10</span><span class="op">)</span> <span class="co"># elemen keberapa yang kurang dari 10</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(sek305 <span class="sc">&lt;</span> <span class="dv">10</span>) <span class="co"># elemen keberapa yang kurang dari 10</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2</code></pre>
 </div>
-<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">index</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">sek305</span> <span class="op">&lt;</span> <span class="fl">10</span><span class="op">)</span> <span class="co"># bilangan berapa saja yang kurang dari 10 dari vektor sek305 </span></span>
-<span><span class="va">sek305</span><span class="op">[</span><span class="va">index</span><span class="op">]</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>index <span class="ot">&lt;-</span> <span class="fu">which</span>(sek305 <span class="sc">&lt;</span> <span class="dv">10</span>) <span class="co"># bilangan berapa saja yang kurang dari 10 dari vektor sek305 </span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>sek305[index]</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 6</code></pre>
 </div>
 </div>
 <p>Vektor dapat terdiri dari angka, karakter dan bahkan rangkaian karakter. Contoh:</p>
 <div class="cell">
-<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">studiku</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Scientific"</span>, <span class="st">"Programming"</span>, <span class="st">"using"</span>, <span class="st">"R"</span>, <span class="st">"kereen!"</span><span class="op">)</span> <span class="co"># perhatikan penggunanaan ""</span></span>
-<span><span class="va">studiku</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>studiku <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Scientific&quot;</span>, <span class="st">&quot;Programming&quot;</span>, <span class="st">&quot;using&quot;</span>, <span class="st">&quot;R&quot;</span>, <span class="st">&quot;kereen!&quot;</span>) <span class="co"># perhatikan penggunanaan &quot;&quot;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>studiku</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Scientific"  "Programming" "using"       "R"           "kereen!"    </code></pre>
+<pre><code>[1] &quot;Scientific&quot;  &quot;Programming&quot; &quot;using&quot;       &quot;R&quot;           &quot;kereen!&quot;    </code></pre>
 </div>
-<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">studiku</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span><span class="op">)</span><span class="op">]</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>studiku[<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)]</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Programming" "using"       "R"          </code></pre>
+<pre><code>[1] &quot;Programming&quot; &quot;using&quot;       &quot;R&quot;          </code></pre>
 </div>
-<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">studiku</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">5</span><span class="op">)</span><span class="op">]</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>studiku[<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">5</span>)]</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Programming" "kereen!"    </code></pre>
+<pre><code>[1] &quot;Programming&quot; &quot;kereen!&quot;    </code></pre>
 </div>
 </div>
 <p>Untuk membuat matriks juga dapat dilakukan dengan mudah. Misalnya, <code>mat.pi.4.5 &lt;-matrix(pi, nrow=4,ncol=5)</code> adalah perintah untuk membuat matriks dimensi 4 × 5 dengan nama <em>mat.pi.4.5</em> dengan semua entri <span class="math inline">\(\pi\)</span>. Sekali lagi, untuk melihat hasilnya, ketik <em>mat.pi.4.5</em> dan tekan Enter. R peka penulisan huruf besar-kecil. Jadi <em>mat.pi.4.5</em> dan <em>mat.Pi.4.5</em> memiliki arti yang berbeda. Hampir semua perintah menggunakan huruf kecil, kecuali perintah <em>View()</em> dan beberapa perintah dari <em>package</em> tertentu.</p>
 <div class="cell">
-<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mat.pi.4.5</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="va">pi</span>, nrow<span class="op">=</span><span class="fl">4</span>,ncol<span class="op">=</span><span class="fl">5</span><span class="op">)</span></span>
-<span><span class="va">mat.pi.4.5</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>mat.pi.<span class="fl">4.5</span> <span class="ot">&lt;-</span><span class="fu">matrix</span>(pi, <span class="at">nrow=</span><span class="dv">4</span>,<span class="at">ncol=</span><span class="dv">5</span>)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>mat.pi.<span class="fl">4.5</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         [,1]     [,2]     [,3]     [,4]     [,5]
 [1,] 3.141593 3.141593 3.141593 3.141593 3.141593
@@ -386,16 +406,19 @@ div.csl-indent {
 [4,] 3.141593 3.141593 3.141593 3.141593 3.141593</code></pre>
 </div>
 </div>
-</section><section id="saatnya-menggunakan-skrip" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="saatnya-menggunakan-skrip">
-<span class="header-section-number">1.5</span> Saatnya menggunakan skrip</h2>
+</section>
+<section id="saatnya-menggunakan-skrip" class="level2" data-number="1.5">
+<h2 data-number="1.5"><span class="header-section-number">1.5</span> Saatnya menggunakan skrip</h2>
 <p>Meskipun kita dapat mengetik dan mengevaluasi semua kemungkinan ekspresi R langsung di konsol, tetapi akan lebih mudah untuk menulis skrip yang berupa kumpulan ekspresi R yang ingin kita evaluasi secara berurutan. APalagi penghitungan statistik biasanya melibatkan banyak baris kode. Jika demikian saatnya kita beralih menggunakan skrip (<em>script</em>). Ada juga yang menyebut skrip dengan program atau kode.</p>
-<p>Penggunaan file skrip (file .R) dapat membantu menjalankan beberapa langkah kode sekaligus. File skrip terletak di sudut kiri atas jendela RStudio Anda atau file <em>source</em>. Untuk membuat skrip baru, Anda dapat mengklik <em>File &gt; New File &gt; R Script</em> atau dengan <em>shortcut</em> <strong>Ctrl+Shift+N</strong>. Maka dilayar RStudio akan muncul layar baru di kiri atas sehingga Anda sekarang punya empat panel. Inilah salah satu keunggulan R dibandingkan perangkat lunak <em>point and click</em> yaitu Anda dapat menyimpan pekerjaan Anda sebagai skrip. Lihat <a href="#fig-4qu">Gambar&nbsp;<span>1.3</span></a>)!</p>
+<p>Penggunaan file skrip (file .R) dapat membantu menjalankan beberapa langkah kode sekaligus. File skrip terletak di sudut kiri atas jendela RStudio Anda atau file <em>source</em>. Untuk membuat skrip baru, Anda dapat mengklik <em>File &gt; New File &gt; R Script</em> atau dengan <em>shortcut</em> <strong>Ctrl+Shift+N</strong>. Maka dilayar RStudio akan muncul layar baru di kiri atas sehingga Anda sekarang punya empat panel. Inilah salah satu keunggulan R dibandingkan perangkat lunak <em>point and click</em> yaitu Anda dapat menyimpan pekerjaan Anda sebagai skrip. Lihat <a href="#fig-4qu">Gambar <span class="quarto-unresolved-ref">fig-4qu</span></a>)!</p>
 <p>File <em>source</em> memungkinkan Anda mengetikkan kode R dan kemudian mengevaluasinya, sehingga terkadang disebut “mengirim perintah ke konsol” - atau memindahkan pernyataan R dari jendela <em>source</em> ke konsol. Penggunaan file skrip memungkinkan Anda memperbaiki kesalahan kode dengan lebih cepat dan kemudian menjalankan kembali kode Anda tanpa perlu mengetik ulang semuanya dari awal.</p>
 <div class="cell" data-fig-cap-location="bottom">
 <div class="cell-output-display">
-<div id="fig-4qu" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="figures/4qu.png" class="img-fluid figure-img" width="682"></p>
-<figcaption class="figure-caption">Gambar&nbsp;1.3: Antar Muka RStudio dengan Skrip</figcaption></figure>
+<div id="fig-4qu" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="figures/4qu.png" class="img-fluid" width="682" /></p>
+<figcaption>Gambar 1.3: Antar Muka RStudio dengan Skrip</figcaption>
+</figure>
 </div>
 </div>
 </div>
@@ -403,48 +426,57 @@ div.csl-indent {
 <p>Untuk menjalankan kode dalam skrip R, untuk satu baris kode, letakkan tetikus di depan kode, untuk satu blok baris, pilih kode tersebut, lalu klik tombol <em>Run</em> atau tekan <code>Ctrl + Enter</code> di Windows sistem. Dalam skrip R, dimungkinkan untuk menambahkan komentar menggunakan #. Segala sesuatu setelah tanda # akan dianggap sebagai komentar dan tidak akan dijalankan oleh R.</p>
 <p>Di awal setiap skrip R, sebaiknya diketikkan paket-paket yang diperlukan untuk mengimplementasikan kode dalam file. Setelah menulis kode untuk memuat paket dengan fungsi <em>library()</em>, Anda dapat menambahkan, sebagai komentar, kata kunci untuk mengingatkan tentang penggunaan paket. Ini akan membantu kita mengingat isi file dan menjelaskan kepada orang lain apa yang diperlukan untuk mengimplementasikan kode dalam skrip R.</p>
 <p>Ini juga merupakan kebiasan baik untuk mendeskripsikan proyek dan menulis komentar singkat di fungsi-fungsi yang kita buat. Sekali lagi ini berguna bagi penulis skrip dan bagi orang ketiga yang akan membaca kode tersebut.</p>
-</section><section id="manajemen-data-dan-projek-di-r" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="manajemen-data-dan-projek-di-r">
-<span class="header-section-number">1.6</span> Manajemen Data dan Projek di R</h2>
+</section>
+<section id="manajemen-data-dan-projek-di-r" class="level2" data-number="1.6">
+<h2 data-number="1.6"><span class="header-section-number">1.6</span> Manajemen Data dan Projek di R</h2>
 <p>R adalah bahasa pemrograman berorientasi objek. Saat Anda membukanya, Anda memiliki lingkungan (<em>Environment</em>) kosong yang dapat diisi dengan objek sebanyak kemampuan memori komputer Anda. Segala sesuatu yang ingin Anda simpan atau manipulasi di lain waktu perlu didefinisikan sebagai objek di lingkungan ini. Termasuk disini file data, objek atau hasil model, grafik, dan sebagainya. Artinya, tidak seperti perangkat lunak statistik standar, yang biasanya hanya mengizinkan analis untuk membuka satu kumpulan data, R memungkinkan analis untuk bekerja dengan beberapa file data secara bersamaan.</p>
 <p>Ekstensi file R untuk file data adalah .RData. Anda dapat menyimpan satu atau lebih objek dalam file tersebut menggunakan fungsi File &gt; Save (Ctrl + S). Lokasi penyimpanan file ini berada di direktori yang sama dengan file proyek <em>.Rproj</em> Anda. Di dalam <em>RData</em> tersimpan hasil model, grafik, atau objek yang lain. Hal ini sangat berguna ketika model membutuhkan waktu lama untuk dalam penghitungannya. Hasil tersebut dapat disimpan dan digunakan kembali nanti.</p>
-</section><section id="paket-paket-r" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="paket-paket-r">
-<span class="header-section-number">1.7</span> Paket-Paket R</h2>
+</section>
+<section id="paket-paket-r" class="level2" data-number="1.7">
+<h2 data-number="1.7"><span class="header-section-number">1.7</span> Paket-Paket R</h2>
 <p>R bekerja melalui paket-paket (<em>packages</em>) termasuk paket dasar dan ribuan paket tambahan. Paket ini mirip dengan aplikasi di ponsel Anda, yang bisa ditambahkan pada ponsel untuk meningkatkan fungsionalitas ponsel Anda. Paket dibuat oleh pengguna dan dibagikan kepada pengguna lain.</p>
 <p>Anda perlu mengunduh paket tertentu untuk menyediakan perintah yang diperlukan dan dapat menjalankan model atau analisis tertentu jika fungsi itu tidak tersedia secara <em>default</em>. Paket-paket itu memerlukan tiga langkah untuk menggunakannya. Pertama, kita harus menginstal paket itu sendiri, memuatnya dari <em>library</em>, dan terakhir memanggil salah satu fungsi paket tersebut.</p>
-<p>Paket dapat diunduh di CRAN (<em>Comprehensive R Archive Network</em>). Misalnya Anda akan menginstal paket data panel ekonometrik <code>plm</code> (<span class="citation" data-cites="croissantPlmLinearModels2023">Croissant et al. (<a href="references.html#ref-croissantPlmLinearModels2023" role="doc-biblioref">2023</a>)</span>), perintah RStudio berikut akan menginstal paket <code>plm</code> di RStudio versi lokal Anda:</p>
+<p>Paket dapat diunduh di CRAN (<em>Comprehensive R Archive Network</em>). Misalnya Anda akan menginstal paket data panel ekonometrik <code>plm</code> (<span class="citation" data-cites="croissantPlmLinearModels2023">Croissant et al. (<a href="#ref-croissantPlmLinearModels2023" role="doc-biblioref">2023</a>)</span>), perintah RStudio berikut akan menginstal paket <code>plm</code> di RStudio versi lokal Anda:</p>
 <div class="cell">
-<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"plm"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;plm&quot;</span>)</span></code></pre></div>
 </div>
 <p>atau bisa juga melalui opsi drop-down (<em>Tools -&gt; Install Package</em>). Paket di CRAN telah dievaluasi untuk memastikan paket tersebut berfungsi di seluruh platform.</p>
-<p>Paket bisa juga diinstall dari Github yaitu untuk paket-paket yang tidak terdapat di CRAN. Misalnya Anda akan menginstal paket <code>rbbt</code> (<span class="citation" data-cites="dunningtonPaleolimbotRbbt2023">Dunnington (<a href="references.html#ref-dunningtonPaleolimbotRbbt2023" role="doc-biblioref">2023</a>)</span>) yaitu konektor R ke <em>Better Bibtex</em> untuk <em>Zotero</em>. Paket tersebut dapat diinstal menggunakan fungsi <code>devtools::install_ github</code> (<span class="citation" data-cites="wickhamDevtoolsToolsMake2022">Wickham et al. (<a href="references.html#ref-wickhamDevtoolsToolsMake2022" role="doc-biblioref">2022</a>)</span>). Sebelumnya Anda harus menginstall <code>devtools</code> terlebih dahulu.</p>
+<p>Paket bisa juga diinstall dari Github yaitu untuk paket-paket yang tidak terdapat di CRAN. Misalnya Anda akan menginstal paket <code>rbbt</code> (<span class="citation" data-cites="dunningtonPaleolimbotRbbt2023">Dunnington (<a href="#ref-dunningtonPaleolimbotRbbt2023" role="doc-biblioref">2023</a>)</span>) yaitu konektor R ke <em>Better Bibtex</em> untuk <em>Zotero</em>. Paket tersebut dapat diinstal menggunakan fungsi <code>devtools::install_ github</code> (<span class="citation" data-cites="wickhamDevtoolsToolsMake2022">Wickham et al. (<a href="#ref-wickhamDevtoolsToolsMake2022" role="doc-biblioref">2022</a>)</span>). Sebelumnya Anda harus menginstall <code>devtools</code> terlebih dahulu.</p>
 <div class="cell">
-<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/">devtools</a></span><span class="op">)</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"paleolimbot/rbbt"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(devtools)</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;paleolimbot/rbbt&quot;</span>)</span></code></pre></div>
 </div>
 <p>Sekali sebuah paket sudah diinstal, maka tidak perlu diinstal lagi seperti halnya aplikasi di ponsel Anda. Tetapi perlu diupdate secara rutin karena pengembang paket tersebut mungkin menambahkan fungsionalitas baru. Untuk mengupdate gunakan opsi drop-down (<em>Tools -&gt; Check for Package Updates</em>).</p>
-<p>RStudio tidak menyimpan paket yang terinstal di memori kerja aktifnya ketika dimatikan. Oleh karena itu, untuk setiap sesi R yang baru, paket yang diperlukan perlu dimuat (<strong>bukan diinstal ulang, cukup dimuat ulang</strong>) dengan fungsi <code><a href="https://rdrr.io/r/base/library.html">library ("nama-paket")</a></code> atau <code><a href="https://rdrr.io/r/base/library.html">require("nama-paket")</a></code>.</p>
-</section><section id="mengimpor-data-ke-dalam-r" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="mengimpor-data-ke-dalam-r">
-<span class="header-section-number">1.8</span> Mengimpor Data ke dalam R</h2>
+<p>RStudio tidak menyimpan paket yang terinstal di memori kerja aktifnya ketika dimatikan. Oleh karena itu, untuk setiap sesi R yang baru, paket yang diperlukan perlu dimuat (<strong>bukan diinstal ulang, cukup dimuat ulang</strong>) dengan fungsi <code>library ("nama-paket")</code> atau <code>require("nama-paket")</code>.</p>
+</section>
+<section id="mengimpor-data-ke-dalam-r" class="level2" data-number="1.8">
+<h2 data-number="1.8"><span class="header-section-number">1.8</span> Mengimpor Data ke dalam R</h2>
 <p>Dalam praktik analisis data, sering kali data disimpan dalam berbagai format. Selain itu kita mungkin tidak memasukkan data langsung ke R, tetapi menggunakan ke worksheet seperti <em>Google Sheets</em> atau bahkan menggunakan program statistik seperti SPSS. R dapat membaca berbagai jenis file data seperti free format text files (txt), comma separated value ﬁles (csv), file Excel, file SPSS, file SAS, dan file Stata.</p>
 <p>Data yang disimpan dalam file csv dapat diunggah ke RStudio dengan dua cara yang relatif sederhana:</p>
 <ol type="1">
 <li>Untuk file yang disimpan secara lokal di folder projek pengguna, perintah <code>read.csv</code> akan mengunggah file tersebut. Sebagai contoh, memasukkan perintah berikut akan mengunggah dan menyimpan file csv bernama <em>inequality.csv</em> di RStudio:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">ineqdata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"inequality.csv"</span><span class="op">)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>ineqdata <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;inequality.csv&quot;</span>)</span></code></pre></div>
 </div>
 <p>Dalam contoh ini, perhatikan sintaksisnya: setelah perintah <code>read.csv</code> dan tanda kurung buka, nama file diberikan di dalam tanda kutip diikuti dengan tanda kurung tutup. Selain itu, data disimpan dengan nama <em>ineqdata</em> dengan menggunakan inisial ineqdata &lt;-. Data set harus diberi nama sedemikian rupa sehingga dapat direferensikan dalam perintah berikutnya, di mana pilihan nama yang sesuai ditentukan oleh pengguna, bergantung pada konteksnya.</p>
 <ol start="2" type="1">
-<li>Jika data dalam format lain, kita perlu menginstal paket untuk mengimpor data misalnya paket <em>foreign</em> (<span class="citation" data-cites="rcoreteamForeignReadData2023">Team et al. (<a href="references.html#ref-rcoreteamForeignReadData2023" role="doc-biblioref">2023</a>)</span>) yang berfungsi untuk membaca dan menulis file data dari SAS, SPSS dan Stata. Paket ini dapat diinstal dengan perintah <code>install.packages("foreign")</code>. Untuk melakukan impor klik <em>File &gt; Import Dataset &gt; From Excel, From Stata, From SPSS</em> dan lain-lain, pilih sesuai jenis data Anda.</li>
-</ol></section><section id="fitur-help" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="fitur-help">
-<span class="header-section-number">1.9</span> Fitur Help</h2>
+<li>Jika data dalam format lain, kita perlu menginstal paket untuk mengimpor data misalnya paket <em>foreign</em> (<span class="citation" data-cites="rcoreteamForeignReadData2023">Team et al. (<a href="#ref-rcoreteamForeignReadData2023" role="doc-biblioref">2023</a>)</span>) yang berfungsi untuk membaca dan menulis file data dari SAS, SPSS dan Stata. Paket ini dapat diinstal dengan perintah <code>install.packages("foreign")</code>. Untuk melakukan impor klik <em>File &gt; Import Dataset &gt; From Excel, From Stata, From SPSS</em> dan lain-lain, pilih sesuai jenis data Anda.</li>
+</ol>
+</section>
+<section id="fitur-help" class="level2" data-number="1.9">
+<h2 data-number="1.9"><span class="header-section-number">1.9</span> Fitur Help</h2>
 <p>Bab ini tidak mencakup semua fitur R, dan bahkan fitur yang dicakupnya pun tidak dibahas secara detil. Untuk mengetahui lebih lanjut tentang perintah R atau fungsi <em>x</em>, Anda dapat mengetikkan <code>help(x)</code> atau cukup <code>?x</code>. Jika Anda tidak dapat mengingat nama pasti dari perintah atau fungsi yang Anda minati, maka <code>help.search("x")</code> akan mencari judul, nama, alias, dan entri kata kunci dari file bantuan yang tersedia untuk frasa <em>x</em>.</p>
-<p>Fitur <em>Help</em> di RStudio adalah bagian yang sangat membantu untuk mempelajari cara menggunakan perintah-perintah tertentu di RStudio. Anda disarankan untuk mengeksplorasi lebih lanjut panel <em>Help</em> yang terletak di kanan bawah RStudio standar atau klik <em>Help &gt; R Help</em>, yang akan membuka tautan ke sejumlah manual, khususnya yang sangat direkomendasikan <em>An Introduction to R</em>. Selain itu ada banyak rujukan bagus untuk mempelajari R dan RStudio misalnya <span class="citation" data-cites="crawleyBook2012">Crawley (<a href="references.html#ref-crawleyBook2012" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="wickhamDataScience2017">Wickham and Grolemund (<a href="references.html#ref-wickhamDataScience2017" role="doc-biblioref">2017</a>)</span> dan <span class="citation" data-cites="verzaniGettingStartedRStudio2011">Verzani (<a href="references.html#ref-verzaniGettingStartedRStudio2011" role="doc-biblioref">2011</a>)</span>. Banyak juga rujukan lain yang bisa diakses secara <em>online</em>.</p>
-<p>Ketika Anda selesai menggunakan R, Anda dapat keluar dengan perintah <code><a href="https://rdrr.io/r/base/quit.html">q()</a></code>. R menanyakan apakah Anda ingin menyimpan <em>workspace</em> atau ruang kerja Anda, yang berisi semua objek yang telah Anda buat selama sesi berlangsung. Jika Anda memilih untuk melakukannya maka semua objek akan disimpan sebagai objek biner terkompresi.</p>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<p>Fitur <em>Help</em> di RStudio adalah bagian yang sangat membantu untuk mempelajari cara menggunakan perintah-perintah tertentu di RStudio. Anda disarankan untuk mengeksplorasi lebih lanjut panel <em>Help</em> yang terletak di kanan bawah RStudio standar atau klik <em>Help &gt; R Help</em>, yang akan membuka tautan ke sejumlah manual, khususnya yang sangat direkomendasikan <em>An Introduction to R</em>. Selain itu ada banyak rujukan bagus untuk mempelajari R dan RStudio misalnya <span class="citation" data-cites="crawleyBook2012">Crawley (<a href="#ref-crawleyBook2012" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="wickhamDataScience2017">Wickham and Grolemund (<a href="#ref-wickhamDataScience2017" role="doc-biblioref">2017</a>)</span> dan <span class="citation" data-cites="verzaniGettingStartedRStudio2011">Verzani (<a href="#ref-verzaniGettingStartedRStudio2011" role="doc-biblioref">2011</a>)</span>. Banyak juga rujukan lain yang bisa diakses secara <em>online</em>.</p>
+<p>Ketika Anda selesai menggunakan R, Anda dapat keluar dengan perintah <code>q()</code>. R menanyakan apakah Anda ingin menyimpan <em>workspace</em> atau ruang kerja Anda, yang berisi semua objek yang telah Anda buat selama sesi berlangsung. Jika Anda memilih untuk melakukannya maka semua objek akan disimpan sebagai objek biner terkompresi.</p>
+<div id="quarto-navigation-envelope" class="hidden">
+<p><span class="hidden" data-render-id="quarto-int-sidebar-title">Analisis Ekonomi dan Keuangan dengan RStudio</span> <span class="hidden" data-render-id="quarto-int-navbar-title">Analisis Ekonomi dan Keuangan dengan RStudio</span> <span class="hidden" data-render-id="quarto-int-next"><span class="chapter-number">2</span>  <span class="chapter-title">Ketimpangan Gender dan Pertumbuhan Ekonomi</span></span> <span class="hidden" data-render-id="quarto-int-prev">Sinopsis</span> <span class="hidden" data-render-id="quarto-int-sidebar:/index.html">Sinopsis</span> <span class="hidden" data-render-id="quarto-int-sidebar:/intro.html"><span class="chapter-number">1</span>  <span class="chapter-title">Pengenalan R dan RStudio</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/gender.html"><span class="chapter-number">2</span>  <span class="chapter-title">Ketimpangan Gender dan Pertumbuhan Ekonomi</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/spasial.html"><span class="chapter-number">3</span>  <span class="chapter-title">Dampak spasial pertumbuhan ekonomi, pencemaran lingkungan dan ketimpangan pendapatan di provinsi Indonesia</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/references.html">Referensi</span> <span class="hidden" data-render-id="footer-left">Analisis Ekonomi dan Keuangan dengan RStudio ditulis oleh Tedy Herlambang.</span> <span class="hidden" data-render-id="footer-right">Buku ini dibuat menggunakan <a href="https://quarto.org/">Quarto</a>.</span> <span class="hidden" data-render-id="quarto-breadcrumbs-e3446138a0f2d60943f4db23a6a42612"><span class="chapter-number">1</span>  <span class="chapter-title">Pengenalan R dan RStudio</span></span></p>
+</div>
+<div id="quarto-meta-markdown" class="hidden">
+<p><span class="hidden" data-render-id="quarto-metatitle">Analisis Ekonomi dan Keuangan dengan RStudio - <span class="chapter-number">1</span>  <span class="chapter-title">Pengenalan R dan RStudio</span></span> <span class="hidden" data-render-id="quarto-twittercardtitle">Analisis Ekonomi dan Keuangan dengan RStudio - <span class="chapter-number">1</span>  <span class="chapter-title">Pengenalan R dan RStudio</span></span> <span class="hidden" data-render-id="quarto-ogcardtitle">Analisis Ekonomi dan Keuangan dengan RStudio - <span class="chapter-number">1</span>  <span class="chapter-title">Pengenalan R dan RStudio</span></span> <span class="hidden" data-render-id="quarto-metasitename">Analisis Ekonomi dan Keuangan dengan RStudio</span> <span class="hidden" data-render-id="quarto-twittercarddesc"></span> <span class="hidden" data-render-id="quarto-ogcardddesc"></span></p>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-crawleyBook2012" class="csl-entry" role="listitem">
 Crawley, Michael J. 2012. <em>The <span>R Book</span></em>. 2nd edition. <span>Chichester, West Sussex, UK</span>: <span>Wiley</span>.
 </div>
@@ -476,7 +508,10 @@ Wickham, Hadley, and Garrett Grolemund. 2017. <em>R for <span>Data Science</span
 Wickham, Hadley, Jim Hester, Winston Chang, and Jennifer Byan. 2022. <span>“Devtools: <span>Tools</span> to <span>Make Developing R Packages Easier</span>.”</span> CRAN.
 </div>
 </div>
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+
+</main> <!-- /main -->
+<script id = "quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -708,26 +743,36 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a  href="/index.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sinopsis</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./gender.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ketimpangan Gender dan Pertumbuhan Ekonomi</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a  href="/gender.html" class="pagination-link">
+        <span class="nav-page-text"><span class='chapter-number'>2</span>  <span class='chapter-title'>Ketimpangan Gender dan Pertumbuhan Ekonomi</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Analisis Ekonomi dan Keuangan dengan RStudio ditulis oleh Tedy Herlambang.</div>   
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <div class='footer-contents'>Analisis Ekonomi dan Keuangan dengan RStudio ditulis oleh Tedy Herlambang.
+</div>  
+    </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
-    <div class="nav-footer-right">Buku ini dibuat menggunakan <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="nav-footer-right">
+      <div class='footer-contents'>Buku ini dibuat menggunakan <a href="https://quarto.org/">Quarto</a>.
+</div>  
+    </div>
   </div>
 </footer>
 
+</body>
 
-</body></html>
+</html>

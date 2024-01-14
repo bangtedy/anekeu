@@ -25,6 +25,8 @@ book:
 
     #- preface-2e.qmd
     - intro.qmd
+    - gender.qmd
+    - spasial.qmd
     - references.qmd
 format:
   docx:
