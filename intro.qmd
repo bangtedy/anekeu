@@ -1,4 +1,9 @@
-# Pengenalan R dan RStudio
+---
+title: "Pengenalan R dan RStudio"
+author: "Tedy Herlambang"
+institute: "Universitas Panca Marga"
+---
+## Pendahuluan
 
 \minitoc <!-- this will include a mini table of contents-->
 
@@ -9,17 +14,9 @@ RStudio bukan R, juga tidak menyertakan R saat Anda mengunduh dan menginstalnya.
 Oleh karena itu, R dan RStudio perlu diunduh dan diinstal terpisah.
 
 R dapat diunduh di [R Project for Statistical Computing](http://www.r-project.org/).
-Di situs ini juga terdapat tautan ke buku, manual, *R Journal* dan lain-lain untuk belajar R.
-Silakan unduh R di situs ini sesuai dengan platform komputasi Anda Windows, Macintosh atau Unix.
-Gratis!
-Sedangkan untuk menginstal RStudio silakan kunjungi [posit](https://posit.co/download/rstudio-desktop/).
-Silakan unduh *RStudio Desktop* dari situs ini.
-Juga gratis!
-Untuk pengenalan ini, saya berasumsi bahwa Anda telah mengunduh dan menginstal R dan RStudio di komputer Anda.
+Di situs ini juga terdapat tautan ke buku, manual, *R Journal* dan lain-lain untuk belajar R. Silakan unduh R sesuai dengan platform komputasi Anda Windows, Macintosh atau Unix. Gratis! Sedangkan untuk menginstal RStudio silakan kunjungi [posit](https://posit.co/download/rstudio-desktop/).Juga gratis! Untuk pengenalan ini, saya berasumsi bahwa Anda telah mengunduh dan menginstal R dan RStudio di komputer Anda.
 
-R tidak punya pengembang antarmuka pengguna grafis (GUI) yang sesuai dengan keinginan pengguna seperti halnya program SPSS atau Stata.
-GUI bawaan R terlihat lebih mirip dengan konsol DOS lama (lihat @fig-rgui).
-Oleh karena itu, dalam buku ini kita akan fokus menggunakan R melalui antarmuka *RStudio*.
+R tidak punya pengembang antarmuka pengguna grafis (GUI) yang sesuai dengan keinginan pengguna seperti halnya program SPSS atau Stata. GUI bawaan R terlihat lebih mirip dengan konsol DOS lama (lihat @fig-rgui). Oleh karena itu, dalam buku ini kita akan fokus menggunakan R melalui antarmuka *RStudio*.
 Dengan RStudio, R lebih mudah digunakan dan lebih mirip dengan program SPSS atau Stata.
 
 ```{r,echo=FALSE}
@@ -30,7 +27,7 @@ Dengan RStudio, R lebih mudah digunakan dan lebih mirip dengan program SPSS atau
 knitr::include_graphics("figures/console432.png")
 ```
 
-Hubungan antara R dan RStudio seperti mesin mobil dan dashboard (@ismayStatisticalInferenceData2019).
+Hubungan antara R dan RStudio seperti mesin mobil dan dashboard [@ismayStatisticalInferenceData2019].
 Bahasa R dapat diumpamakan sebagai mesin mobil, sedangkan RStudio sebagai dasbornya sehingga kita mudah mengkonfigurasi dan mengontrol kerja mesin.
 
 Di buku ini, saya tidak menunjukkan fitur-fitur R dan RStudio yang sangat banyak secara mendetil.
@@ -78,7 +75,7 @@ R berorientasi objek, artinya kita dapat membuat objek dalam sesi R, dan memanip
 1 / (2 + 15) - 1.5 + sqrt(3)
 ```
 
-Selanjutnya kita mungkin ingin memberi nama dan menyimpan hasil perhitungan yang kita lakukan sebagai objek atau variabel. Misalnya *tilu* sebagai evaluasi ekspresi 1 + 2, lalu mencetaknya. Maka kita tuliskan `tilu <- 1+2`. Artinya komputer menghitung 1 + 2 dan menyimpan hasilnya dalam variabel bernama tilu Pada saat kita mengetikkan `tilu <- 1+2`, dan menekan Enter, seolah-olah tidak terjadi apa-apa pada RStudio. Untuk memanggil variabel tilu kita ketikkan lagi tilu dan tekan Enter. Perhatikan operator penugasan **\<-** sebagai ciri khas R, walaupun kita bisa juga menggunakan tanda =. Perhatikan di buku ini perintah ditampilkan dalam kotak abu-abu, sedangkan luarannya ada dibawahnya diawali [1] atau [1,]. Dengan cara yang sama kita membuat variabel `opat = 2+2`.
+Selanjutnya kita mungkin ingin memberi nama dan menyimpan hasil perhitungan yang kita lakukan sebagai objek atau variabel. Misalnya *tilu* sebagai evaluasi ekspresi 1 + 2, lalu mencetaknya. Maka kita tuliskan `tilu <- 1+2`. Artinya komputer menghitung 1 + 2 dan menyimpan hasilnya dalam variabel bernama tilu. Pada saat kita mengetikkan `tilu <- 1+2`, dan menekan Enter, seolah-olah tidak terjadi apa-apa pada RStudio. Untuk memanggil variabel tilu kita ketikkan lagi tilu dan tekan Enter. Perhatikan operator penugasan **\<-** sebagai ciri khas R, walaupun kita bisa juga menggunakan tanda =. Perhatikan di buku ini perintah ditampilkan dalam kotak abu-abu, sedangkan luarannya ada dibawahnya diawali [1] atau [1,]. Semua setelah tanda # adalah komentar dan tidak dievaluasi oleh R. Dengan cara yang sama kita membuat variabel `opat = 2+2`.
 
 ```{r variabel, echo=TRUE}
 tilu <- 1+2

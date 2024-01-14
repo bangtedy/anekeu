@@ -1,4 +1,8 @@
-# Ketimpangan Gender dan Pertumbuhan Ekonomi
+---
+title: "Ketimpangan Gender dan Pertumbuhan Ekonomi"
+author: "Yeni Puspita"
+institute: "Universitas Jember"
+---
 
 
-...in progress...
+`...in progress...`

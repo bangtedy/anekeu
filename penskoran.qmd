@@ -1,0 +1,7 @@
+---
+title: "Model Penskoran Saham Syariah"
+author: "Rifaldi Kadir"
+institute: "UIN Gorontalo"
+---
+
+`...in progress...`
