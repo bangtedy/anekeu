@@ -2,6 +2,9 @@
 title: "Pengenalan R dan RStudio"
 author: "Tedy Herlambang"
 institute: "Universitas Panca Marga"
+engine: knitr
+filters:
+  - webr
 ---
 ## Pendahuluan
 
@@ -70,7 +73,7 @@ Kita dapat menggunakan R secara interaktif atau R dalam gaya "tanya jawab" (@dal
 
 R berorientasi objek, artinya kita dapat membuat objek dalam sesi R, dan memanipulasi objek tersebut berdasarkan namanya. Sebagai ilustrasi, misalnya Anda ingin menghitung 1 + 2, kita tulis setelah **\>** *1+2* dan tekan **Enter**. Hasilnya tigakan? Urutan aturan operasi berlaku dan banyak fungsi matematika lain seperti akar kuadrat, `sqrt`, juga dapat diterapkan seperti yang diperlihatkan di contoh berikutnya.
 
-```{r kalkulator, echo=TRUE}
+```{webr-r}
 1+2
 1 / (2 + 15) - 1.5 + sqrt(3)
 ```
